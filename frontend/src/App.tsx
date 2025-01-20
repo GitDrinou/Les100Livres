@@ -1,35 +1,53 @@
 import * as React from 'react';
 import './App.css';
-// @ts-ignore
-import logo from './logo.svg';
 import {useEffect, useState} from "react";
+import BookCard from "./components/BookCard/BookCard";
 
 const App = () => {
     const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false)
+
     useEffect(() => {
-        fetch("http://localhost:8080/books")
-            .then(response => response.json())
-            .then(response => setData([response]))
-            .catch(error => setData(["error"]))
+        const fetchData = async () => {
+            try {
+                const response = await fetch("http://localhost:8080/books");
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                setData(data);
+            } catch (error) {
+                console.error(error);
+                setError(true);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+
     }, []);
 
   return (
       <>
         <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo"/>
-            <p>
-              Edit <code>src/App.tsx</code> and save to reload.
-            </p>
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
+            <header className="App-header">
+                  { loading && <div> Loading...</div> }
+                  { error && <div> Une erreur est survenue...</div> }
+            </header>
+            <main className="App-main">
+                { data.map(book => (
+                    <BookCard
+                        key={book.id}
+                        title={book.title}
+                        author={book.author}
+                        isbn={book.isbn}
+                        publication={book.publicationDate}
+                        description={book.description}
+                    />
+                ))}
+            </main>
         </div>
       </>
 

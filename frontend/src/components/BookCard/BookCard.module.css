@@ -1,0 +1,16 @@
+.card{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 12px;
+    width: 300px;
+    font-size: 1.2rem;
+}
+
+.card-description {
+    height: 250px;
+    max-height: 250px;
+    overflow: scroll;
+    font-size: 1rem;
+    font-style: italic;
+    text-align: justify;
+}
