@@ -34,12 +34,13 @@
     ]
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.1.0",
-    "@types/react": "^19.0.7",
-    "@types/react-dom": "^19.0.3",
     "@babel/core": "7.22.5",
     "@babel/eslint-parser": "7.22.5",
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
-    "@babel/preset-env": "7.22.5"
+    "@babel/preset-env": "7.22.5",
+    "@svgr/webpack": "^8.1.0",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "react-router-dom": "^7.1.3"
   }
 }

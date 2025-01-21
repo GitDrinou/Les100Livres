@@ -3,7 +3,7 @@
   background-color: #282C34;
   color:  white;
   min-height: 100vh;
-  margin: 24px;
+  padding: 10px;
 }
 
 .App-header {
@@ -17,7 +17,6 @@
 }
 
 .App-main {
-  padding: 24px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 10px;

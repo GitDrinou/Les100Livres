@@ -1,57 +1,23 @@
 import * as React from 'react';
 import './App.css';
-import {useEffect, useState} from "react";
-import BookCard from "./components/BookCard/BookCard";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import ListOtherBooks from "./pages/ListOtherBooks/ListOtherBooks";
+import AddBook from "./pages/AddBook/AddBook";
+import Home from "./pages/Home/Home";
+import List100Books from "./pages/List100Books/List100Books";
 
 const App = () => {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false)
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("http://localhost:8080/books");
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                setData(data);
-            } catch (error) {
-                console.error(error);
-                setError(true);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchData();
-
-    }, []);
-
-  return (
-      <>
-        <div className="App">
-            <header className="App-header">
-                  { loading && <div> Loading...</div> }
-                  { error && <div> Une erreur est survenue...</div> }
-            </header>
-            <main className="App-main">
-                { data.map(book => (
-                    <BookCard
-                        key={book.id}
-                        title={book.title}
-                        author={book.author}
-                        isbn={book.isbn}
-                        publication={book.publicationDate}
-                        description={book.description}
-                    />
-                ))}
-            </main>
-        </div>
-      </>
-
-  );
+   return (
+           <BrowserRouter>
+               <Routes>
+                   <Route index element={<Home/>} />
+                   <Route path={"/100-books"} element={<List100Books/>} />
+                   <Route path={"/other-books"} element={<ListOtherBooks/>} />
+                   <Route path={"/add-books"} element={<AddBook/>} />
+               </Routes>
+           </BrowserRouter>
+       )
 }
 
 export default App;
