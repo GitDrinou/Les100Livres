@@ -25,6 +25,20 @@ public class BooksServiceImpl  implements BooksService {
     }
 
     @Override
+    public List<BooksDTO> getAll100Books() {
+        return booksRepository.findAllByType100(1)
+                .stream()
+                .toList();
+    }
+
+    @Override
+    public List<BooksDTO> getAllOtherBooks() {
+        return booksRepository.findAllByType100(0)
+                .stream()
+                .toList();
+    }
+
+    @Override
     public Optional<BooksDTO> getBookById(int bookId) {
         return Optional.ofNullable(booksRepository.findById(bookId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid book id " + bookId)));
@@ -75,6 +89,7 @@ public class BooksServiceImpl  implements BooksService {
         booksDTO.setPublicationDate(book.publicationDate());
         booksDTO.setIsbn(book.isbn());
         booksDTO.setDescription(book.description());
+        booksDTO.setType100(book.type100());
         return booksDTO;
     }
 
@@ -85,7 +100,8 @@ public class BooksServiceImpl  implements BooksService {
                 booksDTO.getAuthor(),
                 booksDTO.getPublicationDate(),
                 booksDTO.getIsbn(),
-                booksDTO.getDescription()
+                booksDTO.getDescription(),
+                booksDTO.getType100()
                 );
     }
 

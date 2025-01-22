@@ -8,6 +8,8 @@ import java.util.Optional;
 
 public interface BooksService {
    List<BooksDTO> getAllBooks();
+   List<BooksDTO> getAll100Books();
+   List<BooksDTO> getAllOtherBooks();
    Optional<BooksDTO> getBookById(int id);
    Book createBook(Book book);
    Book updateBook(Book book);

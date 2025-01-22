@@ -26,6 +26,9 @@ public class BooksDTO {
     @Column(name = "description", nullable = false, length = Integer.MAX_VALUE)
     private String description;
 
+    @Column(name = "type100", length = 1)
+    private Integer type100;
+
     public Integer getId() {
         return id;
     }
@@ -74,4 +77,11 @@ public class BooksDTO {
         this.description = description;
     }
 
+    public Integer getType100() {
+        return type100;
+    }
+
+    public void setType100(Integer type100) {
+        this.type100 = type100;
+    }
 }

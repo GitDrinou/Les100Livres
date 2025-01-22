@@ -1,16 +1,26 @@
 [
   {
   "title": "Vingt mille lieues sous les mers",
-  "author": "Jule Verne",
+  "author": "Jules Verne",
   "publicationDate": "1869",
   "isbn": "978-2-253-00632-9",
-  "description": "Une chose énorme ayant été signalée par plusieurs navires à travers le monde, une expédition est organisée sur l'Abraham Lincoln, une frégate américaine, pour purger les mers de ce monstre inquéitant. A bord se trouvent le Français Pierre Aronnax, professeur au Muséum de Paris, et Conseil, son fidèle domestique. Alors qu'ils s'approchent du fabuleux anumal, Aronnax, conseil et Ned Land, un harponneur canadien, sont précipités dans la mers par deux gigantesques trombes d'eau avant de se retrouver sur le dos du monstre... qui se révèle être un étonnant sous-marin, le Nautilus, conçu et commandé par le capitaine Nemo, qui paraît farouchement hostile à toute humanité !"
+  "description": "Une chose énorme ayant été signalée par plusieurs navires à travers le monde, une expédition est organisée sur l'Abraham Lincoln, une frégate américaine, pour purger les mers de ce monstre inquéitant. A bord se trouvent le Français Pierre Aronnax, professeur au Muséum de Paris, et Conseil, son fidèle domestique. Alors qu'ils s'approchent du fabuleux anumal, Aronnax, conseil et Ned Land, un harponneur canadien, sont précipités dans la mers par deux gigantesques trombes d'eau avant de se retrouver sur le dos du monstre... qui se révèle être un étonnant sous-marin, le Nautilus, conçu et commandé par le capitaine Nemo, qui paraît farouchement hostile à toute humanité !",
+    "type100": 0
   },
   {
     "title": "Bonjour Tristesse",
     "author": "Françoise Sagan",
     "publicationDate": "1954",
     "isbn": "9-782260-015048",
-    "description": "Sur ce sentiment inconnu dont l'ennui, la douceur m'obsèdent, j'hésite à apposer le nom, le beau nom grave de tristesse. C'est un sentiment si complet, si égoïste que j'en ai presque honte alors que la tristesse m'a toujours paru honorable. Je ne le connaissais pas, elle, mais l'ennui, le regret, plus rarement le remords. Aujourd'hui, quelque chose se replie sur moi comme une soie, énervante et douce et me sépare des autres."
+    "description": "Sur ce sentiment inconnu dont l'ennui, la douceur m'obsèdent, j'hésite à apposer le nom, le beau nom grave de tristesse. C'est un sentiment si complet, si égoïste que j'en ai presque honte alors que la tristesse m'a toujours paru honorable. Je ne le connaissais pas, elle, mais l'ennui, le regret, plus rarement le remords. Aujourd'hui, quelque chose se replie sur moi comme une soie, énervante et douce et me sépare des autres.",
+    "type100": 0
+  },
+  {
+    "title": "Voyage au bout de la nuit",
+    "author": "Louis-Ferdinant Céline",
+    "publicationDate": "1932",
+    "isbn": "9-7820700-213047",
+    "description": "Le roman, écrit à la première personne, suit le narrateur, Ferdinand Bardamu, idéaliste et rebelle, engagé volontaire dans la Grande guerre. Il y découvre avec épouvante les horreurs du front et finit, blessé, par échapper à la boucherie. Hospitalisé, choyé, médaillé, il découvre alors le monde de « l’arrière », son hypocrisie et ses plaisirs, y compris les amourettes sans lendemain. A chaque nouvelle étape de son odyssée, depuis le front de la guerre jusqu’à l’asile en passant par l’Afrique, l’Amérique et la banlieue de Paris, Bardamu n’en finit pas de croiser et de recroiser le chemin de Robinson, un personnage comme lui à la dérive, auquel le lie une amitié de plus en plus malsaine. Celle-ci attire, à intervalles réguliers, Bardamu dans une série d’aventures criminelles et sordides qui concluent le roman par la mort violente de ce double du héros",
+    "type100": 1
   }
 ]

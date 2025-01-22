@@ -20,8 +20,20 @@ public class BooksController {
 
     @CrossOrigin
     @GetMapping
-    public List<BooksDTO> getAllBooks(BooksDTO books) {
+    public List<BooksDTO> getAllBooks() {
         return booksService.getAllBooks();
+    }
+
+    @CrossOrigin
+    @GetMapping("/100")
+    public List<BooksDTO> getAll100Books() {
+        return booksService.getAll100Books();
+    }
+
+    @CrossOrigin
+    @GetMapping("/others")
+    public List<BooksDTO> getAllOtherBooks() {
+        return booksService.getAllOtherBooks();
     }
 
     @GetMapping("/{bookId}")
@@ -34,7 +46,7 @@ public class BooksController {
         return booksService.createBook(book);
     }
 
-    @PatchMapping("/{bookId}")
+    @PutMapping("/{bookId}")
     public Book updateBook(@PathVariable Integer bookId, @RequestBody Book book) {
         return booksService.updateBook(book);
     }

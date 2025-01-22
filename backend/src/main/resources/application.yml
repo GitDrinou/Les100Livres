@@ -1,6 +1,6 @@
 spring:
   application:
-    name: 100-Books-And-More
+    name: 100-Livres-Et-Plus
   datasource:
     url: jdbc:postgresql://localhost:5432/books
     username: admin
@@ -12,7 +12,7 @@ spring:
     baseline-on-migrate: true
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     show-sql: true
   web:
     resources:
