@@ -12,6 +12,6 @@ public interface BooksService {
    List<BooksDTO> getAllOtherBooks();
    Optional<BooksDTO> getBookById(int id);
    Book createBook(Book book);
-   Book updateBook(Book book);
+   Book updateBook(int id, Book book);
    void deleteBook(Integer bookId);
 }

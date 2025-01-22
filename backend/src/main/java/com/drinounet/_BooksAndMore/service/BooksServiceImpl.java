@@ -26,14 +26,14 @@ public class BooksServiceImpl  implements BooksService {
 
     @Override
     public List<BooksDTO> getAll100Books() {
-        return booksRepository.findAllByType100(1)
+        return booksRepository.findAllByType100("1")
                 .stream()
                 .toList();
     }
 
     @Override
     public List<BooksDTO> getAllOtherBooks() {
-        return booksRepository.findAllByType100(0)
+        return booksRepository.findAllByType100("0")
                 .stream()
                 .toList();
     }
@@ -56,8 +56,20 @@ public class BooksServiceImpl  implements BooksService {
         }
     }
 
+    /*
+    *  @PutMapping("/{id}")
+    public ResponseEntity updateClient(@PathVariable Long id, @RequestBody Client client) {
+        Client currentClient = clientRepository.findById(id).orElseThrow(RuntimeException::new);
+        currentClient.setName(client.getName());
+        currentClient.setEmail(client.getEmail());
+        currentClient = clientRepository.save(client);
+
+        return ResponseEntity.ok(currentClient);
+    }
+    * */
+
     @Override
-    public Book updateBook(Book book) {
+    public Book updateBook(int bookId, Book book) {
         BooksDTO bookDTO = convertToEntity(book);
         BooksDTO updatedBook = booksRepository.save(bookDTO);
         return convertToDTO(updatedBook);
@@ -90,6 +102,7 @@ public class BooksServiceImpl  implements BooksService {
         booksDTO.setIsbn(book.isbn());
         booksDTO.setDescription(book.description());
         booksDTO.setType100(book.type100());
+        booksDTO.setIs_read(book.isRead());
         return booksDTO;
     }
 
@@ -101,7 +114,8 @@ public class BooksServiceImpl  implements BooksService {
                 booksDTO.getPublicationDate(),
                 booksDTO.getIsbn(),
                 booksDTO.getDescription(),
-                booksDTO.getType100()
+                booksDTO.getType100(),
+                booksDTO.getIs_read()
                 );
     }
 

@@ -7,6 +7,7 @@ public record Book(
         String publicationDate,
         String isbn,
         String description,
-        Integer type100
+        String type100,
+        String isRead
 ) {
 }

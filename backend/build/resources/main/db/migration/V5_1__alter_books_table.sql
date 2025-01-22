@@ -1,0 +1,2 @@
+ALTER TABLE tBooks DROP COLUMN isRead;
+ALTER TABLE tBooks ADD isRead INTEGER;

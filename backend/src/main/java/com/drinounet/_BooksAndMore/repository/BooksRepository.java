@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface BooksRepository extends JpaRepository<BooksDTO, Integer> {
-    List<BooksDTO> findAllByType100(Integer type100);
+    List<BooksDTO> findAllByType100(String type100);
 }
