@@ -1,8 +1,11 @@
 import * as React from "react";
 import Menu from "../../components/Menu/Menu";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import BookCard from "../../components/BookCard/BookCard";
 import CallAPI from "../../hooks/CallAPI";
+// @ts-ignore
+import styles from "./Liist100Books.module.css";
+
 
 const List100Books = () => {
     const [data, setData] = useState([]);
@@ -14,10 +17,10 @@ const List100Books = () => {
     return (
         <>
             <Menu />
-            <div className="App">
+            <div className={styles.App}>
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
-                <main className="App-main">
+                <main className={styles["App-main"]}>
                     { data.map(book => (
                         <BookCard
                             key={book.id}

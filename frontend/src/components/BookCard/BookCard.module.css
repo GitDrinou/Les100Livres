@@ -1,15 +1,56 @@
 .card{
     border: 1px solid #282C34;
     border-radius: 10px;
-    padding: 12px;
     font-size: 1.2rem;
 }
 
-.card-description {
+.book-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    height: 80px;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #282C34;
+    background-color: #d8d6d6;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.book-author,
+.book-date{
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.book-description {
     height: 250px;
     max-height: 250px;
     overflow: scroll;
     font-size: 1rem;
     font-style: italic;
     text-align: justify;
+    padding: 0 10px 10px 10px;
+    border-bottom: 1px solid #282C34;
+}
+
+.book-isbn{
+    font-size: 0.8rem;
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.block-status{
+   height: 80px;
+    background-color: #d8d6d6;
+    border-radius: 0 0 10px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+    justify-content: flex-end;
+    padding: 0 20px;
+    align-items: center;
 }

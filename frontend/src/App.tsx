@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ListOtherBooks from "./pages/ListOtherBooks/ListOtherBooks";
 import AddBook from "./pages/AddBook/AddBook";

@@ -11,17 +11,16 @@ const BookCard = (props: {
     isRead: string;
 }) => {
 
-    console.table(props);
-    const isRead = ()=> props.isRead == "1" ? <img src={ChecIcon} alt=""/> : <img src={UnchecIcon} alt=""/>
+    const isRead = ()=> props.isRead == "1" ? <img src={ChecIcon} alt="Status: lu" title="Livre lu"/> : <img src={UnchecIcon} alt="Status: non lu" title="Livre non lu"/>
     return (
         <>
             <div className={styles.card}>
-               <p>{props.title}</p>
-                <p>{props.author}</p>
-                <p>{props.publication}</p>
-                <p>{props.isbn}</p>
-                <p className={styles['card-description']}>{props.description}</p>
-                <div>
+               <p className={styles["book-title"]}>{props.title}</p>
+                <p className={styles["book-author"]}>{props.author}</p>
+                <p className={styles["book-date"]}>{props.publication}</p>
+                <p className={styles['book-description']}>{props.description}</p>
+                <p className={styles["book-isbn"]}>Code ISBN: {props.isbn}</p>
+                <div className={styles["block-status"]}>
                     {isRead()}
                 </div>
             </div>

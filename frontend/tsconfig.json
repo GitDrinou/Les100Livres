@@ -111,7 +111,8 @@
   "include": [
     "src/components",
     "node_modules/react-scripts/lib/react-app.d.ts",
-    "src/**/*.module.css"
+    "src/components/**/*.module.css",
+    "src/pages/**/*.module.css",
   ]
 }
 }
