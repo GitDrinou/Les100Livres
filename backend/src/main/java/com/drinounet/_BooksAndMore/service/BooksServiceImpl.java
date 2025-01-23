@@ -3,6 +3,8 @@ package com.drinounet._BooksAndMore.service;
 import com.drinounet._BooksAndMore.datas.Book;
 import com.drinounet._BooksAndMore.datas.BooksDTO;
 import com.drinounet._BooksAndMore.repository.BooksRepository;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -69,10 +71,13 @@ public class BooksServiceImpl  implements BooksService {
     * */
 
     @Override
-    public Book updateBook(int bookId, Book book) {
-        BooksDTO bookDTO = convertToEntity(book);
-        BooksDTO updatedBook = booksRepository.save(bookDTO);
-        return convertToDTO(updatedBook);
+    public ResponseEntity<BooksDTO> updateBook(int bookId, Book book) {
+        BooksDTO currentBook = booksRepository.findById(bookId).orElseThrow(() -> new IllegalArgumentException("Invalid book id " + bookId));
+        currentBook = convertToEntity(book);
+
+        BooksDTO updatedBook = booksRepository.save(currentBook);
+        return new ResponseEntity<>(updatedBook, HttpStatus.OK);
+
     }
 
     @Override
@@ -96,6 +101,7 @@ public class BooksServiceImpl  implements BooksService {
     // Convert Book to BooksDTO
     private BooksDTO  convertToEntity(Book book) {
         BooksDTO booksDTO = new BooksDTO();
+        booksDTO.setId(book.id());
         booksDTO.setTitle(book.title());
         booksDTO.setAuthor(book.author());
         booksDTO.setPublicationDate(book.publicationDate());

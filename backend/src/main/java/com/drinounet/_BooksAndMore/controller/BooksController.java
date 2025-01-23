@@ -3,6 +3,7 @@ package com.drinounet._BooksAndMore.controller;
 import com.drinounet._BooksAndMore.datas.Book;
 import com.drinounet._BooksAndMore.datas.BooksDTO;
 import com.drinounet._BooksAndMore.service.BooksService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -42,12 +43,12 @@ public class BooksController {
     }
 
     @PostMapping
-   public Book createBook(@RequestBody Book book) {
+    public Book createBook(@RequestBody Book book) {
         return booksService.createBook(book);
     }
 
     @PutMapping("/{bookId}")
-    public Book updateBook(@PathVariable Integer bookId, @RequestBody Book book) {
+    public ResponseEntity<BooksDTO> updateBook(@PathVariable Integer bookId, @RequestBody Book book) {
         return booksService.updateBook(bookId, book);
     }
 
