@@ -110,7 +110,8 @@
   },
   "include": [
     "src/components",
-    "frontend/node_modules/react-scripts/lib/react-app.d.ts"
+    "node_modules/react-scripts/lib/react-app.d.ts",
+    "src/**/*.module.css"
   ]
 }
 }

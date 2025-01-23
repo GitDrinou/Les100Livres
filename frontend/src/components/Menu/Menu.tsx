@@ -1,4 +1,3 @@
-// @ts-ignore
 import styles from './Menu.module.css';
 
 const Menu = () => {

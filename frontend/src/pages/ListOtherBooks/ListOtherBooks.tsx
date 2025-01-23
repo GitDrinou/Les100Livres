@@ -2,32 +2,14 @@ import {useEffect, useState} from "react";
 import BookCard from "../../components/BookCard/BookCard";
 import * as React from "react";
 import Menu from "../../components/Menu/Menu";
+import CallAPI from "../../hooks/CallAPI";
 
 const ListOtherBooks = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false)
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("http://localhost:8080/books/others");
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                setData(data);
-            } catch (error) {
-                console.error(error);
-                setError(true);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchData();
-
-    }, []);
+    CallAPI("http://localhost:8080/books/others", setData, setError, setLoading);
 
     return (
         <>
@@ -44,6 +26,7 @@ const ListOtherBooks = () => {
                             isbn={book.isbn}
                             publication={book.publicationDate}
                             description={book.description}
+                            isRead={book.is_read}
                         />
                     ))}
                 </main>

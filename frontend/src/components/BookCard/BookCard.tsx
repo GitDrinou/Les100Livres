@@ -1,13 +1,18 @@
-// @ts-ignore
 import styles from './BookCard.module.css';
+import ChecIcon from '../../assets/icons/ico-check.png';
+import UnchecIcon from '../../assets/icons/ico-uncheck.png';
 
 const BookCard = (props: {
     title: string;
     author: string;
     publication: string;
     isbn: string;
-    description: string; }) => {
+    description: string;
+    isRead: string;
+}) => {
 
+    console.table(props);
+    const isRead = ()=> props.isRead == "1" ? <img src={ChecIcon} alt=""/> : <img src={UnchecIcon} alt=""/>
     return (
         <>
             <div className={styles.card}>
@@ -16,6 +21,9 @@ const BookCard = (props: {
                 <p>{props.publication}</p>
                 <p>{props.isbn}</p>
                 <p className={styles['card-description']}>{props.description}</p>
+                <div>
+                    {isRead()}
+                </div>
             </div>
         </>
 
