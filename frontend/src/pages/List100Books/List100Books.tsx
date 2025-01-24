@@ -9,10 +9,11 @@ import styles from "./Liist100Books.module.css";
 
 const List100Books = () => {
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false)
+    const apiMethod = "GET";
 
-  CallAPI("http://localhost:8080/books/100", setData, setError, setLoading);
+  CallAPI("http://localhost:8080/books/100", apiMethod, null, setData, setError, setLoading);
 
     return (
         <>

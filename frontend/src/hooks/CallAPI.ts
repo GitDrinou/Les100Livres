@@ -1,20 +1,47 @@
 import {useEffect} from "react";
 
-const CallAPI = ( url, setData, setError, setLoading) => {
+const CallAPI = (
+    url,
+    apiMethod,
+    body,
+    setData,
+    setLoading,
+    setError
+) => {
+
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchData = async () =>  {
+
+            setLoading(true);
+
+            const options = {
+                method: apiMethod,
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: body,
+            }
+
             try {
-                const response = await fetch(url);
+
+                if (body) {
+                   options.body = JSON.stringify(body);
+                }
+
+                const response = await fetch(url, options);
+
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
+
                 const data = await response.json();
+
                 setData(data);
             } catch (error) {
                 console.error(error);
                 setError(true);
             } finally {
-                setLoading(false);
+                if (setLoading) setLoading(false);
             }
         };
 

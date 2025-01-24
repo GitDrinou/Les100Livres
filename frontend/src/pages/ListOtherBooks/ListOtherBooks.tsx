@@ -9,10 +9,12 @@ import styles from "./ListOtherBooks.module.css";
 
 const ListOtherBooks = () => {
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
+    const apiMethod = "GET";
 
-    CallAPI("http://localhost:8080/books/others", setData, setError, setLoading);
+
+    CallAPI("http://localhost:8080/books/others", apiMethod, null, setData, setError, setLoading);
 
     return (
         <>
