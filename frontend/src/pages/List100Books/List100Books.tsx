@@ -18,6 +18,7 @@ const List100Books = () => {
         <>
             <Menu />
             <div className={styles.App}>
+                <h1>Liste des 100 livres à lire</h1>
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
                 <main className={styles["App-main"]}>

@@ -2,6 +2,7 @@ import {useState} from "react";
 import BookCard from "../../components/BookCard/BookCard";
 import * as React from "react";
 import Menu from "../../components/Menu/Menu";
+import Buttons from "../../components/Submenu/Submenu";
 import CallAPI from "../../hooks/CallAPI";
 // @ts-ignore
 import styles from "./ListOtherBooks.module.css";
@@ -16,7 +17,9 @@ const ListOtherBooks = () => {
     return (
         <>
             <Menu />
+            <Buttons />
             <div className={styles.App}>
+                <h1>Liste d'autres livres</h1>
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
                 <main className={styles["App-main"]}>

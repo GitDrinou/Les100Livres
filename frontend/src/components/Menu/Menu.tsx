@@ -10,7 +10,7 @@ const Menu = () => {
                         <a href="/">100</a>
                     </div>
                     <a href="/100-books">Les 100 livres à lire</a>
-                    <a href="/other-books">Lectures diverses</a>
+                    <a href="/other-books"> Les autres livres</a>
                 </nav>
             </header>
         </>

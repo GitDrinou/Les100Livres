@@ -1,0 +1,17 @@
+.submenu {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #282C34;
+
+}
+
+.button-link {
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    padding: 10px;
+    text-decoration:none;
+}

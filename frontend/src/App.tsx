@@ -13,7 +13,7 @@ const App = () => {
                    <Route index element={<Home/>} />
                    <Route path={"/100-books"} element={<List100Books/>} />
                    <Route path={"/other-books"} element={<ListOtherBooks/>} />
-                   <Route path={"/add-books"} element={<AddBook/>} />
+                   <Route path={"/add-book"} element={<AddBook/>} />
                </Routes>
            </BrowserRouter>
        )
