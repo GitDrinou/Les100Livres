@@ -12,7 +12,7 @@
     "title": "A la recherche du temps perdu",
     "author": "Marcel Proust",
     "publicationDate": "1927",
-    "isbn": "-",
+    "isbn": "0",
     "description": " ",
     "type100": "1",
     "isRead": "0"
@@ -21,7 +21,7 @@
     "title": "Don Quichotte",
     "author": "Cervantès",
     "publicationDate": "1615",
-    "isbn": "-",
+    "isbn": "1",
     "description": " ",
     "type100": "1",
     "isRead": "0"
@@ -30,7 +30,79 @@
     "title": "Ulysse",
     "author": "James Joyce",
     "publicationDate": "1922",
-    "isbn": "-",
+    "isbn": "2",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Cent ans de solitude",
+    "author": "Gabriel García Márquez",
+    "publicationDate": "1967",
+    "isbn": "3",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Gatsby le Magnifique",
+    "author": "Francis Scott Fitzgerald",
+    "publicationDate": "1925",
+    "isbn": "4",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "publicationDate": "1851",
+    "isbn": "5",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Guerre et Paix",
+    "author": "Léon Tolstoï",
+    "publicationDate": "1865",
+    "isbn": "6",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Hamlet",
+    "author": "William Shakespeare",
+    "publicationDate": "1599-1601",
+    "isbn": "7",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "L'Odyssée",
+    "author": "Homère",
+    "publicationDate": "VIIIe",
+    "isbn": "8",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Madame Bovary",
+    "author": "Gustave Flaubert",
+    "publicationDate": "1857",
+    "isbn": "9",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La Divine Comédie",
+    "author": "Dante",
+    "publicationDate": "1303-1321",
+    "isbn": "10",
     "description": " ",
     "type100": "1",
     "isRead": "0"
