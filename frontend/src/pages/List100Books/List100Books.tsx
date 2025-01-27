@@ -1,6 +1,6 @@
 import * as React from "react";
 import Menu from "../../components/Menu/Menu";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import BookCard from "../../components/BookCard/BookCard";
 import CallAPI from "../../hooks/CallAPI";
 // @ts-ignore
@@ -8,12 +8,17 @@ import styles from "./Liist100Books.module.css";
 
 
 const List100Books = () => {
+    const url= "http://localhost:8080/books/100";
+    const apiMethod = "GET";
+
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false)
-    const apiMethod = "GET";
 
-  CallAPI("http://localhost:8080/books/100", apiMethod, null, setData, setError, setLoading);
+    useEffect(() => {
+        CallAPI({url, apiMethod, setData, setLoading, setError});
+    }, []);
+
 
     return (
         <>

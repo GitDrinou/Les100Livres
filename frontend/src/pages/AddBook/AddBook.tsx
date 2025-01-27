@@ -2,22 +2,28 @@ import Menu from "../../components/Menu/Menu";
 import * as React from "react";
 // @ts-ignore
 import styles from "./AddBooks.module.css";
-import {useState} from "react";
+import { useState } from "react";
 import CallAPI from "../../hooks/CallAPI";
 
 const AddBook = () => {
+    const url = "http://localhost:8080/books";
+    const apiMethod = "POST";
+
     const initialData = {
         title: "",
         author: "",
         publicationDate: "",
         isbn: "",
         description: "",
+        type100: "0",
         isRead: "0"
     }
-    const [formData, setFormData] = useState(initialData)
-    const apiMethod = "POST";
 
-    //CallAPI("http://localhost:8080/books/100", apiMethod, null, setData, setError, setLoading);
+    const [formData, setFormData] = useState(initialData);
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false)
+
 
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -30,8 +36,10 @@ const AddBook = () => {
     const handleSubmit = (event: { preventDefault: () => void; }) => {
        console.log("submit action");
        event.preventDefault();
-       console.table(formData);
-
+       CallAPI({url, apiMethod, body: formData, setData, setLoading, setError});
+       if (!loading || !error) {
+           document.location.href="/other-books";
+       }
     }
 
     const handleClear = () => {

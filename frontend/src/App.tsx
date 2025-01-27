@@ -4,6 +4,7 @@ import ListOtherBooks from "./pages/ListOtherBooks/ListOtherBooks";
 import AddBook from "./pages/AddBook/AddBook";
 import Home from "./pages/Home/Home";
 import List100Books from "./pages/List100Books/List100Books";
+import UpdateBook from "./pages/UpdateBook/UpdateBook";
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
                    <Route path={"/100-books"} element={<List100Books/>} />
                    <Route path={"/other-books"} element={<ListOtherBooks/>} />
                    <Route path={"/add-book"} element={<AddBook/>} />
+                   <Route path={"/update-book"} element={<UpdateBook/>} />
                </Routes>
            </BrowserRouter>
        )

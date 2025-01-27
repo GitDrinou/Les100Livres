@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Voyage au bout de la nuit",
+    "author": "Louis-Ferdinant Céline",
+    "publicationDate": "1932",
+    "isbn": "9-7820700-213047",
+    "description": "Le roman, écrit à la première personne, suit le narrateur, Ferdinand Bardamu, idéaliste et rebelle, engagé volontaire dans la Grande guerre. Il y découvre avec épouvante les horreurs du front et finit, blessé, par échapper à la boucherie. Hospitalisé, choyé, médaillé, il découvre alors le monde de « l’arrière », son hypocrisie et ses plaisirs, y compris les amourettes sans lendemain. A chaque nouvelle étape de son odyssée, depuis le front de la guerre jusqu’à l’asile en passant par l’Afrique, l’Amérique et la banlieue de Paris, Bardamu n’en finit pas de croiser et de recroiser le chemin de Robinson, un personnage comme lui à la dérive, auquel le lie une amitié de plus en plus malsaine. Celle-ci attire, à intervalles réguliers, Bardamu dans une série d’aventures criminelles et sordides qui concluent le roman par la mort violente de ce double du héros",
+    "type100": "1",
+    "isRead": "1"
+  },
+  {
+    "title": "A la recherche du temps perdu",
+    "author": "Marcel Proust",
+    "publicationDate": "1927",
+    "isbn": "-",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Don Quichotte",
+    "author": "Cervantès",
+    "publicationDate": "1615",
+    "isbn": "-",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Ulysse",
+    "author": "James Joyce",
+    "publicationDate": "1922",
+    "isbn": "-",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  }
+]

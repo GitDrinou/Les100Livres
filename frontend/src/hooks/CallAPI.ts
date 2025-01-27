@@ -1,32 +1,31 @@
 import {useEffect} from "react";
+import {data} from "react-router-dom";
 
-const CallAPI = (
-    url,
-    apiMethod,
-    body,
-    setData,
-    setLoading,
-    setError
-) => {
+const CallAPI = ({
+                     url,
+                     apiMethod,
+                     body = null,
+                     headers = {},
+                     setData,
+                     setLoading,
+                     setError
+}) => {
 
-    useEffect(() => {
         const fetchData = async () =>  {
 
-            setLoading(true);
+            if (setLoading) setLoading(true);
+            if (body) body = JSON.stringify(body);
 
             const options = {
                 method: apiMethod,
                 headers: {
                     "Content-Type": "application/json",
+                    ...headers,
                 },
                 body: body,
             }
 
             try {
-
-                if (body) {
-                   options.body = JSON.stringify(body);
-                }
 
                 const response = await fetch(url, options);
 
@@ -39,7 +38,7 @@ const CallAPI = (
                 setData(data);
             } catch (error) {
                 console.error(error);
-                setError(true);
+                if (setError) setError(true);
             } finally {
                 if (setLoading) setLoading(false);
             }
@@ -47,7 +46,6 @@ const CallAPI = (
 
         fetchData();
 
-    }, []);
-}
+};
 
 export default CallAPI;

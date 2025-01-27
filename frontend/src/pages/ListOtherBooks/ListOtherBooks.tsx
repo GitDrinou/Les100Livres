@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import BookCard from "../../components/BookCard/BookCard";
 import * as React from "react";
 import Menu from "../../components/Menu/Menu";
@@ -8,13 +8,16 @@ import CallAPI from "../../hooks/CallAPI";
 import styles from "./ListOtherBooks.module.css";
 
 const ListOtherBooks = () => {
+    const url = "http://localhost:8080/books/others";
+    const apiMethod = "GET";
+
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
-    const apiMethod = "GET";
 
-
-    CallAPI("http://localhost:8080/books/others", apiMethod, null, setData, setError, setLoading);
+    useEffect(() => {
+        CallAPI({url, apiMethod, setData, setLoading, setError});
+    }, []);
 
     return (
         <>

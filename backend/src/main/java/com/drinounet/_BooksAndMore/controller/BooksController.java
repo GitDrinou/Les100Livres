@@ -42,6 +42,7 @@ public class BooksController {
         return booksService.getBookById(bookId);
     }
 
+    @CrossOrigin
     @PostMapping
     public Book createBook(@RequestBody Book book) {
         return booksService.createBook(book);
