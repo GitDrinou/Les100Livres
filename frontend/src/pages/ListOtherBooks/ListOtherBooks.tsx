@@ -6,6 +6,7 @@ import Buttons from "../../components/Submenu/Submenu";
 import CallAPI from "../../hooks/CallAPI";
 // @ts-ignore
 import styles from "./ListOtherBooks.module.css";
+import {sortedByTitleByIsRead} from "../../scripts/utilities";
 
 const ListOtherBooks = () => {
     const url = "http://localhost:8080/books/others";
@@ -19,6 +20,8 @@ const ListOtherBooks = () => {
         CallAPI({url, apiMethod, setData, setLoading, setError});
     }, []);
 
+    const sortedDatas = sortedByTitleByIsRead(data);
+
     return (
         <>
             <Menu />
@@ -28,7 +31,7 @@ const ListOtherBooks = () => {
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
                 <main className={styles["App-main"]}>
-                    { data.map(book => (
+                    { sortedDatas.map(book => (
                         <BookCard
                             key={book.id}
                             title={book.title}

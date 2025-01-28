@@ -5,6 +5,7 @@ import BookCard from "../../components/BookCard/BookCard";
 import CallAPI from "../../hooks/CallAPI";
 // @ts-ignore
 import styles from "./Liist100Books.module.css";
+import {sortedByTitleByIsRead} from "../../scripts/utilities";
 
 
 const List100Books = () => {
@@ -19,6 +20,7 @@ const List100Books = () => {
         CallAPI({url, apiMethod, setData, setLoading, setError});
     }, []);
 
+    const sortedDatas = sortedByTitleByIsRead(data);
 
     return (
         <>
@@ -28,7 +30,7 @@ const List100Books = () => {
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
                 <main className={styles["App-main"]}>
-                    { data.map(book => (
+                    { sortedDatas.map(book => (
                         <BookCard
                             key={book.id}
                             title={book.title}

@@ -106,5 +106,185 @@
     "description": " ",
     "type100": "1",
     "isRead": "0"
+  },
+  {
+    "title": "Lolita",
+    "author": "Vladimir Nabokhov",
+    "publicationDate": "1955",
+    "isbn": "11",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les frères Karamasov",
+    "author": "Fiodor Dostoïevski",
+    "publicationDate": "1880",
+    "isbn": "12",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Crimes et châtiment",
+    "author": "Fiodor Dostoïevski",
+    "publicationDate": "1867",
+    "isbn": "13",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les Hauts de Hurlevent",
+    "author": "Emily Brontë",
+    "publicationDate": "1847",
+    "isbn": "14",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "L'Attrape-Coeur",
+    "author": "J. D. Salinger",
+    "publicationDate": "1951",
+    "isbn": "15",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Orgueil et Préjugés",
+    "author": "Jane Austen",
+    "publicationDate": "1813",
+    "isbn": "16",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les Aventures de Huckleberry Finn",
+    "author": "Mark Twain",
+    "publicationDate": "1885",
+    "isbn": "17",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Anna Karénine",
+    "author": "Léon Tolstoï",
+    "publicationDate": "1877",
+    "isbn": "18",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Alice aux pays des merveilles",
+    "author": "Lewis Caroll",
+    "publicationDate": "1865",
+    "isbn": "19",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Illiade",
+    "author": "Homère",
+    "publicationDate": "VIe",
+    "isbn": "20",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La promenade au phare",
+    "author": "Virginia Woolf",
+    "publicationDate": "1927",
+    "isbn": "21",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Catch 22",
+    "author": "Joseph Heller",
+    "publicationDate": "1961",
+    "isbn": "22",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Au coeur des ténèbres",
+    "author": "Joseph Conrad",
+    "publicationDate": "1902",
+    "isbn": "23",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le Bruit et la Fureur",
+    "author": "William Faulkner",
+    "publicationDate": "1929",
+    "isbn": "24",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "publicationDate": "1949",
+    "isbn": "25",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les Grandes Espérances",
+    "author": "Charles Dickens",
+    "publicationDate": "1861",
+    "isbn": "26",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les Milles et Un Nuit",
+    "author": "Recueil",
+    "publicationDate": "Xe-XIVe",
+    "isbn": "27",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les raisins de la colère",
+    "author": "John Steinbeck",
+    "publicationDate": "1939",
+    "isbn": "28",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Absalon, Absalon !",
+    "author": "William Faulkner",
+    "publicationDate": "1939",
+    "isbn": "29",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "L'homme invisible",
+    "author": "Ralph Ellison",
+    "publicationDate": "1952",
+    "isbn": "30",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
   }
 ]
