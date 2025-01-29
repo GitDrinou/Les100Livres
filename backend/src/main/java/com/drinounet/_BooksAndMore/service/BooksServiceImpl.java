@@ -58,17 +58,6 @@ public class BooksServiceImpl  implements BooksService {
         }
     }
 
-    /*
-    *  @PutMapping("/{id}")
-    public ResponseEntity updateClient(@PathVariable Long id, @RequestBody Client client) {
-        Client currentClient = clientRepository.findById(id).orElseThrow(RuntimeException::new);
-        currentClient.setName(client.getName());
-        currentClient.setEmail(client.getEmail());
-        currentClient = clientRepository.save(client);
-
-        return ResponseEntity.ok(currentClient);
-    }
-    * */
 
     @Override
     public ResponseEntity<BooksDTO> updateBook(int bookId, Book book) {
@@ -113,7 +102,7 @@ public class BooksServiceImpl  implements BooksService {
     }
 
     // conversion de BooksDTO to Book
-    private Book convertToDTO(BooksDTO booksDTO) {
+    public Book convertToDTO(BooksDTO booksDTO) {
         return new Book(booksDTO.getId(),
                 booksDTO.getTitle(),
                 booksDTO.getAuthor(),
