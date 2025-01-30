@@ -33,6 +33,7 @@ const List100Books = () => {
                     { sortedDatas.map(book => (
                         <BookCard
                             key={book.id}
+                            bookId={book.id}
                             title={book.title}
                             author={book.author}
                             isbn={book.isbn}

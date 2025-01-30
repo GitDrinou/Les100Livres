@@ -15,7 +15,7 @@ const App = () => {
                    <Route path={"/100-books"} element={<List100Books/>} />
                    <Route path={"/other-books"} element={<ListOtherBooks/>} />
                    <Route path={"/add-book"} element={<AddBook/>} />
-                   <Route path={"/update-book"} element={<UpdateBook/>} />
+                   <Route path={"/update-book/:bookId"} element={<UpdateBook/>} />
                </Routes>
            </BrowserRouter>
        )

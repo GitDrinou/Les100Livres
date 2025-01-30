@@ -34,7 +34,6 @@ const AddBook = () => {
     }
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
-       console.log("submit action");
        event.preventDefault();
        CallAPI({url, apiMethod, body: formData, setData, setLoading, setError});
        if (!loading || !error) {

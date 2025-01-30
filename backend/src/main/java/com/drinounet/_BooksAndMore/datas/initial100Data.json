@@ -286,5 +286,617 @@
     "description": " ",
     "type100": "1",
     "isRead": "0"
-  }
+  },
+  {
+    "title": "Ne tirez pas sur l'oiseau moqueur",
+    "author": "Harper Lee",
+    "publicationDate": "1960",
+    "isbn": "31",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le Procès",
+    "author": "Franz Kafka",
+    "publicationDate": "1925",
+    "isbn": "32",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le Rouge et le Noir",
+    "author": "Stendhal",
+    "publicationDate": "1830",
+    "isbn": "33",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Middlemarch",
+    "author": "George Eliot",
+    "publicationDate": "1871-1872",
+    "isbn": "34",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les voyages de Gulliver",
+    "author": "Jonathan Swift",
+    "publicationDate": "1721",
+    "isbn": "35",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Beloved",
+    "author": "Toni Morrison",
+    "publicationDate": "1952",
+    "isbn": "36",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Mrs Dalloway",
+    "author": "Virginia Woolf",
+    "publicationDate": "1925",
+    "isbn": "37",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les nouvelles de...",
+    "author": "Anton Tchekhov",
+    "publicationDate": "1883-1887",
+    "isbn": "38",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "L'Etranger",
+    "author": "Albert Camus",
+    "publicationDate": "1938",
+    "isbn": "39",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "publicationDate": "1847",
+    "isbn": "40",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Enéide",
+    "author": "Virgile",
+    "publicationDate": "-29/-19",
+    "isbn": "41",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Fictions",
+    "author": "Luis Borges",
+    "publicationDate": "1944",
+    "isbn": "42",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le soleil se lève aussi",
+    "author": "Ernest Hemingway",
+    "publicationDate": "1926",
+    "isbn": "43",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "David Copperfield",
+    "author": "Charles Dickens",
+    "publicationDate": "1851",
+    "isbn": "44",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Vie et opinions de Tristan Shandy, gentilhomme",
+    "author": "Laurence Sterne",
+    "publicationDate": "1759",
+    "isbn": "45",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Feuilles d'herbes",
+    "author": "Walt Whitman",
+    "publicationDate": "1909",
+    "isbn": "46",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La Montagne magique",
+    "author": "Thomas Mann",
+    "publicationDate": "1924",
+    "isbn": "47",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Portrait de l'artiste en jeune homme",
+    "author": "James Joyce",
+    "publicationDate": "1916",
+    "isbn": "48",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les Enfants de minuit",
+    "author": "Salman Rushdie",
+    "publicationDate": "1983",
+    "isbn": "49",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Oedipe Roi",
+    "author": "Sophocle",
+    "publicationDate": "425 av. JC",
+    "isbn": "50",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Candide",
+    "author": "Voltaire",
+    "publicationDate": "1759",
+    "isbn": "51",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le Seigneur des anneaux",
+    "author": "J.R.R. Tolkien",
+    "publicationDate": "1954-1955",
+    "isbn": "52",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "L'idiot",
+    "author": "Fiodor Dostoïevski",
+    "publicationDate": "1668-1669",
+    "isbn": "53",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "publicationDate": "1862",
+    "isbn": "54",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Route des Indes",
+    "author": "Edward Morgan Forster",
+    "publicationDate": "1924",
+    "isbn": "55",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le viel homme et la mer",
+    "author": "Ernest Hemingway",
+    "publicationDate": "1952",
+    "isbn": "56",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Tout s'effondre",
+    "author": "Chinua Achebe",
+    "publicationDate": "1958",
+    "isbn": "57",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Emma",
+    "author": "Jane Austen",
+    "publicationDate": "1815",
+    "isbn": "58",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Pour qui sonne le glas",
+    "author": "Ernest Hemingway",
+    "publicationDate": "1940",
+    "isbn": "59",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les nouvelles de ...",
+    "author": "Franz Kafka",
+    "publicationDate": "1904-1924",
+    "isbn": "60",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La Métamorphose",
+    "author": "Franz Kafka",
+    "publicationDate": "1915",
+    "isbn": "61",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Portrait de femme",
+    "author": "Henry James",
+    "publicationDate": "1881",
+    "isbn": "62",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Frankenstein ou le Prométhée moderne",
+    "author": "Mary Shelley",
+    "publicationDate": "1831",
+    "isbn": "63",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Feu pâle",
+    "author": "Vladimir Nabokov",
+    "publicationDate": "1962",
+    "isbn": "64",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Antigone",
+    "author": "Sophocle",
+    "publicationDate": "441 av. JC",
+    "isbn": "65",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Tandis que j'agonise",
+    "author": "William Faulkner",
+    "publicationDate": "1930",
+    "isbn": "66",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La couleur pourpre",
+    "author": "Alice Walker",
+    "publicationDate": "1982",
+    "isbn": "67",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les Démons",
+    "author": "Fiodor Dostoïevski",
+    "publicationDate": "1871-1872",
+    "isbn": "68",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Autant en emporte le vent",
+    "author": "Margaret Mitchell",
+    "publicationDate": "1936",
+    "isbn": "69",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Sa majesté des mouches",
+    "author": "Wiliam Golding",
+    "publicationDate": "1954",
+    "isbn": "70",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le meilleur des mondes",
+    "author": "Aldous Huxley",
+    "publicationDate": "1932",
+    "isbn": "71",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les contes d'...",
+    "author": "Edgar Allan Poe",
+    "publicationDate": "1830-1849",
+    "isbn": "72",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le temps de l'innocence",
+    "author": "Edith Wharton",
+    "publicationDate": "1920",
+    "isbn": "73",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les âmes mortes",
+    "author": "Nicolas Gogol",
+    "publicationDate": "1842",
+    "isbn": "74",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Sur la route",
+    "author": "Jack Kerouac",
+    "publicationDate": "1957",
+    "isbn": "75",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le bon soldat",
+    "author": "Ford Madox Ford",
+    "publicationDate": "1915",
+    "isbn": "76",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La ferme des animaux",
+    "author": "George Orwell",
+    "publicationDate": "1945",
+    "isbn": "77",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Orlando",
+    "author": "Virginia Woolf",
+    "publicationDate": "1928",
+    "isbn": "78",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les contes de Canterbury",
+    "author": "Geoffrrey Chaucer",
+    "publicationDate": "XIVe",
+    "isbn": "79",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La foire aux vanités",
+    "author": "William Makepeace Thackeray",
+    "publicationDate": "1847-1848",
+    "isbn": "80",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Au-dessous du volcan",
+    "author": "Malcolm Lowry",
+    "publicationDate": "1949",
+    "isbn": "81",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La terre vaine",
+    "author": "T.S. Eliot",
+    "publicationDate": "1922",
+    "isbn": "82",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "L'adieu aux armes",
+    "author": "Ernest Hemingway",
+    "publicationDate": "1929",
+    "isbn": "83",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le château",
+    "author": "Franz Kafka",
+    "publicationDate": "1926",
+    "isbn": "84",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "L'éducation sentimentale",
+    "author": "Gustave Flaubert",
+    "publicationDate": "1869",
+    "isbn": "85",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Abattoir 5",
+    "author": "Kurt Vonnegut",
+    "publicationDate": "1969",
+    "isbn": "86",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La servabte écarlate",
+    "author": "Margaret Atwood",
+    "publicationDate": "1985",
+    "isbn": "87",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La toile de Charlotte",
+    "author": "E.B. White",
+    "publicationDate": "1982",
+    "isbn": "88",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Une enfant du pays",
+    "author": "Richard Wright",
+    "publicationDate": "1940",
+    "isbn": "89",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La chartreuse de Parme",
+    "author": "Stendhal",
+    "publicationDate": "1839",
+    "isbn": "90",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le paradis perdu",
+    "author": "John Milton",
+    "publicationDate": "1667",
+    "isbn": "91",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Gargantua",
+    "author": "François Rabelais",
+    "publicationDate": "1535",
+    "isbn": "92",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les poèmes d'...",
+    "author": "Emily Dickinson",
+    "publicationDate": "1890",
+    "isbn": "93",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Faust",
+    "author": "Johan Wolfgang von Goethe",
+    "publicationDate": "1808",
+    "isbn": "94",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Rebecca",
+    "author": "Daphne de Maurier",
+    "publicationDate": "1938",
+    "isbn": "95",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Les fleurs du mal",
+    "author": "Charles Baudelaire",
+    "publicationDate": "1857",
+    "isbn": "96",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "Le Décaméron",
+    "author": "Boccace",
+    "publicationDate": "1349-1353",
+    "isbn": "97",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
+  {
+    "title": "La lettre écarlate",
+    "author": "Nathaniel Hawthorne",
+    "publicationDate": "1850",
+    "isbn": "98",
+    "description": " ",
+    "type100": "1",
+    "isRead": "0"
+  },
 ]

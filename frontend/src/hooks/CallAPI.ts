@@ -11,6 +11,8 @@ const CallAPI = ({
                      setError
 }) => {
 
+
+
         const fetchData = async () =>  {
 
             if (setLoading) setLoading(true);

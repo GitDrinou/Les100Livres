@@ -37,6 +37,7 @@ public class BooksController {
         return booksService.getAllOtherBooks();
     }
 
+    @CrossOrigin
     @GetMapping("/{bookId}")
     public Optional<BooksDTO> getABook(@PathVariable Integer bookId) {
         return booksService.getBookById(bookId);
@@ -48,6 +49,7 @@ public class BooksController {
         return booksService.createBook(book);
     }
 
+    @CrossOrigin
     @PutMapping("/{bookId}")
     public ResponseEntity<BooksDTO> updateBook(@PathVariable Integer bookId, @RequestBody Book book) {
         return booksService.updateBook(bookId, book);
