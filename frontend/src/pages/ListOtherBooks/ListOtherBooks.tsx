@@ -27,7 +27,11 @@ const ListOtherBooks = () => {
             <Menu />
             <Buttons />
             <div className={styles.App}>
-                <h1>Liste d'autres livres à lire</h1>
+                <h1>Liste d'autres livres</h1>
+                <p>
+                    Cette liste est en plus de celle des 100 livres à lire dans sa vie.<br/>
+                    Ce sont des livres que j'ai lu et que je conseillerais de lire (surtout les "Werber", parce que je suis une fan).
+                </p>
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
                 <main className={styles["App-main"]}>
@@ -40,6 +44,7 @@ const ListOtherBooks = () => {
                             isbn={book.isbn}
                             publication={book.publicationDate}
                             description={book.description}
+                            type={book.type100}
                             isRead={book.is_read}
                         />
                     ))}

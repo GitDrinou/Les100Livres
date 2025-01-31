@@ -18,7 +18,7 @@ const UpdateBook = () => {
         isbn: "",
         description: "",
         type100: "0",
-        isRead: "1"
+        is_read: "0"
     }
 
     //const [formData, setFormData] = useState(initialData);
@@ -134,10 +134,9 @@ const UpdateBook = () => {
                         <div className={styles["col-input"]}>
                             <select id="isRead"
                                     name="isRead"
-                                    value={data.isRead}
                                     onChange={handleChange}>
-                                <option value="0">Non</option>
-                                <option value="1">Oui</option>
+                                <option value="0" selected={data.is_read === "0"}>Non</option>
+                                <option value="1" selected={data.is_read === "1"}>Oui</option>
                             </select>
                         </div>
                     </div>

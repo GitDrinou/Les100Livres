@@ -1,16 +1,6 @@
 .logo {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 150px;
-    font-size: 3rem;
-    font-weight: bold;
-    background-color: white;
-    color: black;
-    border-radius: 0 0 50px 0;
-    border-right: 25px solid #282C34;
-    border-bottom: 2px solid #282C34;
 }
 
 .logo > a,
@@ -22,20 +12,22 @@
     height: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 25px;
     font-size: 1.2rem;
     align-items: center;
-    text-align: left;
-    background-color: #646E82;
-    border-radius: 0 0 10px 0;
+    justify-content: space-between;
+    background-color: #C7CACF ;
+    border-bottom: 1px solid #717376;
+    border-radius: 0 0 10px 10px;
 }
 
 .nav-header > a,
 .nav-header > a:visited {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
     padding: 5px;
+    border-right: 2px solid black;
 }
 
 .nav-header > a:hover {
@@ -46,9 +38,9 @@
 @media (max-width: 600px){
     .logo {
         width: 100%;
-        font-size: 3.2rem;
         height: 100px;
     }
+
     .nav-header {
         height: auto;
         display: grid;

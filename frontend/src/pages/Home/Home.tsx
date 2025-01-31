@@ -7,7 +7,11 @@ const Home = () => {
         <>
             <Menu />
             <main className={styles.main}>
-                <p>Home page here</p>
+                <h1>Les 100... et plus !</h1>
+                <h2>A l'origine</h2>
+                <p>
+
+                </p>
             </main>
         </>
     )

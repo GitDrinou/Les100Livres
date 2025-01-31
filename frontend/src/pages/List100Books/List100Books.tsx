@@ -39,6 +39,7 @@ const List100Books = () => {
                             isbn={book.isbn}
                             publication={book.publicationDate}
                             description={book.description}
+                            type={book.type100}
                             isRead={book.is_read}
                         />
                     ))}

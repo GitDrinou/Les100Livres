@@ -19,30 +19,30 @@ const AddBook = () => {
         isRead: "0"
     }
 
-    const [formData, setFormData] = useState(initialData);
-    const [data, setData] = useState([]);
+    //const [formData, setFormData] = useState(initialData);
+    const [data, setData] = useState(initialData);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false)
 
 
     const handleChange = (event) => {
         const {name, value} = event.target;
-        setFormData({
-            ...formData,
+        setData({
+            ...data,
             [name]: value,
         })
     }
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
        event.preventDefault();
-       CallAPI({url, apiMethod, body: formData, setData, setLoading, setError});
+       CallAPI({url, apiMethod, body: data, setData, setLoading, setError});
        if (!loading || !error) {
            document.location.href="/other-books";
        }
     }
 
     const handleClear = () => {
-        setFormData(initialData);
+        setData(initialData);
     }
 
     return (
@@ -59,7 +59,7 @@ const AddBook = () => {
                             <input id="title"
                                    type="text"
                                    name="title"
-                                   value={formData.title}
+                                   value={data.title}
                                    onChange={handleChange}
                                    placeholder="Ex.: Les Misérables"/>
                         </div>
@@ -72,7 +72,7 @@ const AddBook = () => {
                             <input id="author"
                                    type="text"
                                    name="author"
-                                   value={formData.author}
+                                   value={data.author}
                                    onChange={handleChange}
                                    placeholder="Ex.: Victor Hugo"/>
                         </div>
@@ -85,7 +85,7 @@ const AddBook = () => {
                             <input id="publicationDate"
                                    type="text"
                                    name="publicationDate"
-                                   value={formData.publicationDate}
+                                   value={data.publicationDate}
                                    onChange={handleChange}
                                    placeholder="Ex.: 1930, février 2000, ..."/>
                         </div>
@@ -98,7 +98,7 @@ const AddBook = () => {
                             <input id="isbn"
                                    type="text"
                                    name="isbn"
-                                   value={formData.isbn}
+                                   value={data.isbn}
                                    onChange={handleChange}
                                    placeholder="Ex.: 9-34567-23456-6"/>
                         </div>
@@ -110,7 +110,7 @@ const AddBook = () => {
                         <div className={styles["col-input"]}>
                             <textarea id="description"
                                       name="description"
-                                      value={formData.description}
+                                      value={data.description}
                                       onChange={handleChange}
                                       placeholder="Ex;: résumé de fin de couverture, extrait, ...">
                             </textarea>
@@ -123,7 +123,7 @@ const AddBook = () => {
                         <div className={styles["col-input"]}>
                             <select id="isRead"
                                     name="isRead"
-                                    value={formData.isRead}
+                                    value={data.isRead}
                                     onChange={handleChange}>
                                 <option value="0">Non</option>
                                 <option value="1">Oui</option>

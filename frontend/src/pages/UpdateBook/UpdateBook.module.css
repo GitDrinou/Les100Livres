@@ -34,8 +34,16 @@ label {
     clear: both;
 }
 
-input[type=text], select{
+input[type=text]{
     width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+fieldset{
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
