@@ -22,11 +22,33 @@ const List100Books = () => {
 
     const sortedDatas = sortedByTitleByIsRead(data);
 
+    const displayCounter = () => {
+        let countRead = 0;
+        let totalCount = 0;
+
+        if (!loading){
+            totalCount = data.length;
+            for (const book of data) {
+                if (book.is_read ==="1") {
+                    countRead++;
+                }
+            }
+            return countRead + "/" + totalCount;
+        }
+
+        return "";
+    }
+
     return (
         <>
             <Menu />
             <div className={styles.App}>
                 <h1>Liste des 100 livres à lire</h1>
+                <p>
+                    Cette liste n'est bien évidemment pas exhaustive, mais ce sont les 100 oeuvres à lire dans sa vie.<br/>
+                    On peut y trouver des romans, des nouvelles, des recueils de poèmes, etc...<br/>
+                </p>
+                <div className={styles.counter}>{displayCounter()}</div>
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
                 <main className={styles["App-main"]}>

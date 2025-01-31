@@ -26,15 +26,15 @@ const ListOtherBooks = () => {
         <>
             <Menu />
             <Buttons />
-            <div className={styles.App}>
-                <h1>Liste d'autres livres</h1>
+            <div className={styles.otherBook}>
+                <h1>Liste d'autres livres ({sortedDatas.length})</h1>
                 <p>
                     Cette liste est en plus de celle des 100 livres à lire dans sa vie.<br/>
                     Ce sont des livres que j'ai lu et que je conseillerais de lire (surtout les "Werber", parce que je suis une fan).
                 </p>
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
-                <main className={styles["App-main"]}>
+                <main className={styles["otherBook-main"]}>
                     { sortedDatas.map(book => (
                         <BookCard
                             key={book.id}
