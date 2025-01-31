@@ -27,9 +27,7 @@ dependencies {
 	runtimeOnly("org.postgresql:postgresql")
 	implementation("org.flywaydb:flyway-core")
 	implementation("org.flywaydb:flyway-database-postgresql")
-	testImplementation("junit:junit:4.12")
-	testImplementation("io.github.robwin:assertj-swagger:0.8.1")
-
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 	//runtimeOnly("com.h2database:h2")
 }
 

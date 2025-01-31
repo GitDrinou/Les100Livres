@@ -10,3 +10,6 @@ Ceci est mon tout premier projet d'application web en Java Springboot.
     - PostgreSQL
 - Frontend
     - React TS
+
+## Documentation
+- [Swagger](http://localhost:8080/swagger-ui/index.html)
