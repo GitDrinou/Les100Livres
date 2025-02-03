@@ -1,5 +1,38 @@
 .main {
     color:  #282C34;
     min-height: 100vh;
-    padding: 10px;
+}
+
+.container {
+    display: flex;
+}
+
+.col-left {
+    border-right: 1px solid #282C34;
+    padding-right:20px;
+    margin-right: 20px;
+}
+
+.col-left > img {
+    border-radius: 10px;
+}
+
+@media (max-width: 600px){
+    .container {
+        display: grid;
+        grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+        padding-bottom: 16px;
+        justify-items: center;
+        font-size: 1rem;
+    }
+
+    .col-left {
+        padding-right: 0;
+        margin-right: 0;
+        border-right: 0;
+        border-bottom: 1px solid #282C34;
+        padding-bottom:20px;
+        margin-bottom: 20px;
+    }
+
 }
