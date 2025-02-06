@@ -10,18 +10,31 @@ const Home = () => {
             <Menu />
             <main className={styles.main}>
                 <h1>Les 100... et plus !</h1>
-                <h2>A l'origine</h2>
                 <div className={styles.container}>
                     <div className={styles["col-left"]}>
                         <img src={ImgAffiche} alt="Affiche du film Equalizer"/>
                     </div>
                     <div className={styles["col-right"]}>
+                        <h2>A l'origine</h2>
                         <p>
-                            Lorem ipsum odor amet, consectetuer adipiscing elit. Nostra lobortis tellus elementum ad elit commodo diam. Volutpat massa tincidunt blandit vestibulum finibus? Eu ut condimentum nullam, sollicitudin finibus nisl. Magnis penatibus penatibus fusce turpis curabitur viverra felis. Mauris hendrerit habitant at; nam cursus habitasse curae curabitur malesuada. Mollis erat curae aliquam; luctus integer facilisi. Vitae netus gravida; mus quam vulputate enim. Odio ante ultricies vulputate mattis sagittis et eros consequat consectetur.
-                            Posuere adipiscing tempor, lobortis praesent duis curabitur. Neque pretium etiam suscipit duis proin montes in. Nisi ad euismod montes vivamus mollis nec risus porttitor. Sociosqu duis ultricies justo, molestie fusce eu. Euismod dui in aliquet tortor potenti fermentum aliquam. Class nec sed himenaeos amet rhoncus luctus sodales penatibus fermentum. Quam sagittis varius diam taciti suscipit. Auctor bibendum sociosqu eros condimentum imperdiet pellentesque.
-                            Senectus sit pellentesque scelerisque sociosqu torquent velit congue lacus. Nec rhoncus egestas aptent risus pharetra porta ut. Ut ridiculus cubilia vehicula efficitur rutrum mattis elit ipsum malesuada. Scelerisque phasellus sociosqu ac ligula hendrerit senectus ridiculus. At nisi vestibulum nostra nibh ridiculus malesuada. Lacus fusce phasellus fusce ac auctor est? Ut dis tempor suspendisse accumsan ex tincidunt per. Nisl purus conubia adipiscing vitae amet praesent mi. Iaculis luctus volutpat ac cubilia morbi id aliquam porta aptent.
-                            Faucibus nibh ante ad nec venenatis consequat. Mollis sociosqu malesuada laoreet at amet faucibus molestie. Elit torquent sed tellus quisque in felis in vehicula. Sollicitudin nostra risus egestas nec duis cras! Lacinia nisi duis interdum elementum morbi fermentum commodo. Consequat ut orci duis sodales ac feugiat magna sem. Sagittis blandit vulputate, commodo eget ante lacus. Conubia sem nam torquent taciti aptent porttitor pharetra dapibus.
-                            Nam tellus elit netus justo; mus nisl penatibus. In non dignissim pretium enim aptent nibh; lacus gravida. Metus platea vitae cursus morbi eu felis sem. Vitae sociosqu mi nec, sed a nec. Ornare dui facilisis odio lectus tincidunt finibus tincidunt. Elementum est venenatis cubilia ex ridiculus bibendum mauris etiam enim? Facilisi metus hendrerit parturient; malesuada massa himenaeos. Vestibulum nibh torquent ultricies, lectus sit facilisi.
+                            Tout a commencé avec ce film : "Equalizer".<br/>
+                            Le héros, Robert McCall, est un ancien agent secret qui a des inscomnies.<br/>
+                            La nuit il s'installe à la même table d'un café avec un livre figurant dans la "liste des 100 romans qu'il faut avoir lus".<br/>
+                            Sa femme a initialisé la lecture de cette liste. Malheureusement, elle est morte avant d'avoir pu finir ces 100 romans. <br/>
+                            C'est en hommage à son épouse qu'il a décidé de se lancer dans la lecture de ces romans.<br/>
+                        </p>
+                        <h2>Réflexion</h2>
+                        <p>
+                            Je ne me suis jamais définie comme une grande lectrice.<br/>
+                            Je lisais de temps en temps pour m'évader. <br/>
+                            De Stephen King avec "Le Fléau", en passant par "L'Empire des anges" de Bernard Werber, ou plus récemment "La prochaine fois que tu mordras la poussière" de Panayotis Pascot, je n'ai pas de genre préféré. <br/>
+                            Mais je dois avouer que j'ai un faible pour les romans de Bernard Werber. <br/>
+                            J'ai donc décidé de me lancer dans la lecture de ces 100 livres avec un objectif de découvrir de nouveaux auteurs ou d'étendre mon horizon. <br/>
+                        </p>
+                        <h2>Conseil</h2>
+                        <p>
+                            Les autres livres, que j'ai listé, sont ceux que j'ai trouvé intéressants, et que je conseillerais de lire.
+                            Ils ne font pas partis de la liste de 100, mais certains auraient pu en faire partie.
                         </p>
                     </div>
                 </div>
