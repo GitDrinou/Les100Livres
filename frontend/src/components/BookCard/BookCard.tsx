@@ -14,9 +14,11 @@ const BookCard = (props: {
     isRead: string;
 }) => {
 
+    const haveToUpdate = () => props.type === "1" ? <img src={UpdateIcon} alt="Modifier les élements du livre" title="Modifier" onClick={handleClick}/> : null;
     const isRead = ()=> props.isRead == "1" ? <img src={ChecIcon} alt="Status: lu" title="Livre lu"/> : <img src={UnchecIcon} alt="Status: non lu" title="Livre non lu"/>
 
-    const displayReadIcon = () => props.type == "1" ? isRead() : null;
+    const displayUpdateIcon = () => props.type == "1" ? isRead() : null;
+    const displayReadIcon = () => props.type == "1" ? haveToUpdate() : null;
 
     function handleClick() {
         document.location.href=`/update-book/${props.bookId}`;
@@ -31,8 +33,8 @@ const BookCard = (props: {
                 <p className={styles['book-description']}>{props.description}</p>
                 <p className={styles["book-isbn"]}>Code ISBN: {props.isbn}</p>
                 <div className={styles["block-status"]}>
-                    <img src={UpdateIcon} alt="Modifier les élements du livre"  title="Modifier" onClick={handleClick}/>
                     {displayReadIcon()}
+                    {displayUpdateIcon()}
                 </div>
             </div>
         </>
