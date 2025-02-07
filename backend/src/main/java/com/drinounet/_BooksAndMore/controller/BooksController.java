@@ -5,6 +5,10 @@ import com.drinounet._BooksAndMore.datas.BooksDTO;
 import com.drinounet._BooksAndMore.service.BooksService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,12 +39,17 @@ public class BooksController {
     public List<BooksDTO> getAll100Books() {
         return booksService.getAll100Books();
     }
+    /*-- PAGINATION VERSION --
+        public Page<BooksDTO> getAll100Books(@PageableDefault(size = 10) Pageable pageable) {
+            return booksService.getAll100Books(pageable);
+        }
+    */
 
     @CrossOrigin
     @GetMapping("/others")
     @Operation(summary = "Récupérer la liste des autrss livres", description = "Retourne tous les autres livres enregistrés")
-    public List<BooksDTO> getAllOtherBooks() {
-        return booksService.getAllOtherBooks();
+    public Page<BooksDTO> getAllOtherBooks(@PageableDefault(size = 10, sort = "title", direction = Sort.Direction.ASC) Pageable pageable) {
+        return booksService.getAllOtherBooks(pageable);
     }
 
     @CrossOrigin

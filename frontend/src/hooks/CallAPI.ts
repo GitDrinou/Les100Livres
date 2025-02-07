@@ -1,12 +1,10 @@
-import {useEffect} from "react";
-import {data} from "react-router-dom";
-
 const CallAPI = ({
                      url,
                      apiMethod,
                      body = null,
                      headers = {},
                      setData,
+    setTotalPages,
                      setLoading,
                      setError
 }) => {
@@ -37,7 +35,8 @@ const CallAPI = ({
 
                 const data = await response.json();
 
-                setData(data);
+                setData(data.content ? data.content: data);
+                setTotalPages(data.totalPages);
             } catch (error) {
                 console.error(error);
                 if (setError) setError(true);

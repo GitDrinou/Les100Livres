@@ -9,25 +9,28 @@ import {sortedByTitleByIsRead} from "../../scripts/utilities";
 
 
 const List100Books = () => {
-    const url= "http://localhost:8080/books/100";
-    const apiMethod = "GET";
-
+    const [page, setPage] = useState(0);
+    const [totalPages, setTotalPages] = useState(1);
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false)
 
+    const pageSize = 10;
+    const url= `http://localhost:8080/books/100?page=${page}&size=${pageSize}`;
+    const apiMethod = "GET";
+
     useEffect(() => {
-        CallAPI({url, apiMethod, setData, setLoading, setError});
+        CallAPI({url, apiMethod, setData, setTotalPages, setLoading, setError});
     }, []);
 
+    console.log(data);
     const sortedDatas = sortedByTitleByIsRead(data);
 
     const displayCounter = () => {
         let countRead = 0;
-        let totalCount = 0;
+        const totalCount = 100;
 
         if (!loading){
-            totalCount = data.length;
             for (const book of data) {
                 if (book.is_read ==="1") {
                     countRead++;

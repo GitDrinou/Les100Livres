@@ -3,6 +3,8 @@ package com.drinounet._BooksAndMore.service;
 import com.drinounet._BooksAndMore.datas.Book;
 import com.drinounet._BooksAndMore.datas.BooksDTO;
 import com.drinounet._BooksAndMore.repository.BooksRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -28,16 +30,17 @@ public class BooksServiceImpl  implements BooksService {
 
     @Override
     public List<BooksDTO> getAll100Books() {
-        return booksRepository.findAllByType100("1")
-                .stream()
-                .toList();
+        return booksRepository.findALLBooksByType100("1").stream().toList().stream().toList();
     }
+   /* --PAGE VERSION --
+    public Page<BooksDTO> getAll100Books(Pageable pageable) {
+        return booksRepository.findAllByType100("1", pageable);
+    }
+    */
 
     @Override
-    public List<BooksDTO> getAllOtherBooks() {
-        return booksRepository.findAllByType100("0")
-                .stream()
-                .toList();
+    public Page<BooksDTO> getAllOtherBooks(Pageable pageable) {
+        return booksRepository.findAllOtherBooksByType100("0", pageable);
     }
 
     @Override

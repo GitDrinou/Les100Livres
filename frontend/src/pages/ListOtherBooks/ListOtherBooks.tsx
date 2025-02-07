@@ -9,15 +9,19 @@ import styles from "./ListOtherBooks.module.css";
 import {sortedByTitleByIsRead} from "../../scripts/utilities";
 
 const ListOtherBooks = () => {
-    const url = "http://localhost:8080/books/others";
-    const apiMethod = "GET";
-
+    const [page, setPage] = useState(0);
+    const [totalPages, setTotalPages] = useState(1);
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
+    const pageSize = 10;
+    const url = `http://localhost:8080/books/others?page=${page}&size=${pageSize}`;
+    const apiMethod = "GET";
+
+
     useEffect(() => {
-        CallAPI({url, apiMethod, setData, setLoading, setError});
+        CallAPI({url, apiMethod, setData, setTotalPages, setLoading, setError});
     }, []);
 
     const sortedDatas = sortedByTitleByIsRead(data);
@@ -27,7 +31,7 @@ const ListOtherBooks = () => {
             <Menu />
             <Buttons />
             <div className={styles.otherBook}>
-                <h1>Liste d'autres livres ({sortedDatas.length})</h1>
+                <h1>Liste d'autres livres</h1>
                 <p>
                     Cette liste est en plus de celle des 100 livres à lire dans sa vie.<br/>
                     Ce sont des livres que j'ai lu et que je conseillerais de lire (surtout les "Werber", parce que je suis une fan).
