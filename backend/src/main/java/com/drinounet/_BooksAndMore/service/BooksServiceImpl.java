@@ -29,14 +29,9 @@ public class BooksServiceImpl  implements BooksService {
     }
 
     @Override
-    public List<BooksDTO> getAll100Books() {
-        return booksRepository.findALLBooksByType100("1").stream().toList().stream().toList();
-    }
-   /* --PAGE VERSION --
     public Page<BooksDTO> getAll100Books(Pageable pageable) {
-        return booksRepository.findAllByType100("1", pageable);
+        return booksRepository.findALLBooksByType100("1", pageable);
     }
-    */
 
     @Override
     public Page<BooksDTO> getAllOtherBooks(Pageable pageable) {

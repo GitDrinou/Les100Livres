@@ -1,0 +1,22 @@
+.container {
+    margin: 20px 00;
+    text-align: right;
+    padding: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+    border: 1px solid #CCCCCC;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #CCCCCC;
+    color: #717376;
+}

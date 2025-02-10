@@ -7,11 +7,13 @@ import CallAPI from "../../hooks/CallAPI";
 // @ts-ignore
 import styles from "./ListOtherBooks.module.css";
 import {sortedByTitleByIsRead} from "../../scripts/utilities";
+import {Book} from "../../types/Books";
+import Pagination from "../../components/Pagination/Pagination";
 
 const ListOtherBooks = () => {
     const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(1);
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<Book[]>([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
@@ -22,7 +24,7 @@ const ListOtherBooks = () => {
 
     useEffect(() => {
         CallAPI({url, apiMethod, setData, setTotalPages, setLoading, setError});
-    }, []);
+    }, [page]);
 
     const sortedDatas = sortedByTitleByIsRead(data);
 
@@ -34,10 +36,15 @@ const ListOtherBooks = () => {
                 <h1>Liste d'autres livres</h1>
                 <p>
                     Cette liste est en plus de celle des 100 livres à lire dans sa vie.<br/>
-                    Ce sont des livres que j'ai lu et que je conseillerais de lire (surtout les "Werber", parce que je suis une fan).
+                    Ce sont des livres que j'ai lu et que je conseillerais de lire (surtout les "Werber", parce que j'en suis fan).
                 </p>
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
+                <Pagination
+                    actualPage={page}
+                    setPage={setPage}
+                    totalPages={totalPages}
+                />
                 <main className={styles["otherBook-main"]}>
                     { sortedDatas.map(book => (
                         <BookCard
@@ -53,6 +60,11 @@ const ListOtherBooks = () => {
                         />
                     ))}
                 </main>
+                <Pagination
+                    actualPage={page}
+                    setPage={setPage}
+                    totalPages={totalPages}
+                />
             </div>
         </>
 

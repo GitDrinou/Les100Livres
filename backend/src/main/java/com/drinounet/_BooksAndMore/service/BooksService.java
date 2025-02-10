@@ -11,8 +11,7 @@ import java.util.Optional;
 
 public interface BooksService {
    List<BooksDTO> getAllBooks();
-   //-- PAGE VERSION -- Page<BooksDTO> getAll100Books(Pageable pageable);
-   List<BooksDTO> getAll100Books();
+   Page<BooksDTO> getAll100Books(Pageable pageable);
    Page<BooksDTO> getAllOtherBooks(Pageable pageable);
    Optional<BooksDTO> getBookById(int id);
    Book createBook(Book book);

@@ -6,12 +6,14 @@ import CallAPI from "../../hooks/CallAPI";
 // @ts-ignore
 import styles from "./Liist100Books.module.css";
 import {sortedByTitleByIsRead} from "../../scripts/utilities";
+import {Book} from "../../types/Books";
+import Pagination from "../../components/Pagination/Pagination";
 
 
 const List100Books = () => {
     const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(1);
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<Book[]>([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false)
 
@@ -21,9 +23,8 @@ const List100Books = () => {
 
     useEffect(() => {
         CallAPI({url, apiMethod, setData, setTotalPages, setLoading, setError});
-    }, []);
+    }, [page]);
 
-    console.log(data);
     const sortedDatas = sortedByTitleByIsRead(data);
 
     const displayCounter = () => {
@@ -54,6 +55,11 @@ const List100Books = () => {
                 <div className={styles.counter}>{displayCounter()}</div>
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
+                <Pagination
+                    actualPage={page}
+                    setPage={setPage}
+                    totalPages={totalPages}
+                />
                 <main className={styles["App-main"]}>
                     { sortedDatas.map(book => (
                         <BookCard
@@ -69,6 +75,11 @@ const List100Books = () => {
                         />
                     ))}
                 </main>
+                <Pagination
+                    actualPage={page}
+                    setPage={setPage}
+                    totalPages={totalPages}
+                />
             </div>
         </>
 

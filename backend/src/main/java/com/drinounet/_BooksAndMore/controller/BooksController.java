@@ -36,14 +36,9 @@ public class BooksController {
     @CrossOrigin
     @GetMapping("/100")
     @Operation(summary = "Récupérer la liste des 100 livres à lire dans une vie", description = "Retourne tous les 100 livres enregistrés")
-    public List<BooksDTO> getAll100Books() {
-        return booksService.getAll100Books();
-    }
-    /*-- PAGINATION VERSION --
-        public Page<BooksDTO> getAll100Books(@PageableDefault(size = 10) Pageable pageable) {
+     public Page<BooksDTO> getAll100Books(@PageableDefault(size = 10) Pageable pageable) {
             return booksService.getAll100Books(pageable);
-        }
-    */
+    }
 
     @CrossOrigin
     @GetMapping("/others")
