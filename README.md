@@ -9,7 +9,13 @@ Ceci est mon tout premier projet d'application web en Java Springboot.
     - JDBC
     - PostgreSQL
 - Frontend
-    - React TS
+    - React (TypeScript)
+
+## Installation
+- lancer le backend :
+  - exécuter le docker compose: `docker compose up -d`
+  - lancer l'application java
+- lancer le frontend: `npm run start`
 
 ## Documentation
 - [Swagger](http://localhost:8080/swagger-ui/index.html)
