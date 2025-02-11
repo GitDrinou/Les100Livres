@@ -16,7 +16,7 @@
     font-size: 1.2rem;
     align-items: center;
     justify-content: space-between;
-    background-color: #C7CACF ;
+    background: linear-gradient(to right, brown, #CCCCCC);
     border-bottom: 1px solid #717376;
     border-radius: 0 0 10px 10px;
 }
@@ -24,10 +24,10 @@
 .nav-header > a,
 .nav-header > a:visited {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
     padding: 5px;
-    border-right: 2px solid black;
+    border-right: 2px solid white;
 }
 
 .nav-header > a:hover {

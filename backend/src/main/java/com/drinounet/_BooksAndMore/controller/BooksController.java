@@ -6,6 +6,7 @@ import com.drinounet._BooksAndMore.service.BooksService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -36,8 +37,17 @@ public class BooksController {
     @CrossOrigin
     @GetMapping("/100")
     @Operation(summary = "Récupérer la liste des 100 livres à lire dans une vie", description = "Retourne tous les 100 livres enregistrés")
-     public Page<BooksDTO> getAll100Books(@PageableDefault(size = 10) Pageable pageable) {
-            return booksService.getAll100Books(pageable);
+     public Page<BooksDTO> getAll100Books(Pageable pageable) {
+        Sort sort = Sort.by(
+                Sort.Order.desc("isRead"),
+                Sort.Order.asc("title")
+        );
+        Pageable sortedPageable = PageRequest.of(
+                pageable.getPageNumber(),
+                pageable.getPageSize(),
+                sort
+        );
+            return booksService.getAll100Books(sortedPageable);
     }
 
     @CrossOrigin
