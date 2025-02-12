@@ -56,7 +56,6 @@ public class BooksServiceImpl  implements BooksService {
         }
     }
 
-
     @Override
     public ResponseEntity<BooksDTO> updateBook(int bookId, Book book) {
         BooksDTO currentBook = booksRepository.findById(bookId).orElseThrow(() -> new IllegalArgumentException("Invalid book id " + bookId));
