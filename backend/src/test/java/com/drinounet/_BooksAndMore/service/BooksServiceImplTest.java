@@ -6,10 +6,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.*;
 
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
@@ -33,7 +36,7 @@ public class BooksServiceImplTest {
         book.setAuthor("New Author");
         book.setIsbn("New Isbn");
         book.setDescription("New Description");
-        book.setType100("0");
+        book.setType100("1");
         book.setIs_read("0");
 
         book2 = new BooksDTO();
@@ -60,18 +63,24 @@ public class BooksServiceImplTest {
     @Test
     void verify_integration_of_2_new_books_from_100() {
 
-        when(booksRepository.save(book)).thenReturn(book);
-        when(booksRepository.save(book)).thenReturn(book2);
+        Pageable pageable = PageRequest.of(0, 5, Sort.by("title"));
 
-        when(booksService.getAll100Books()).thenReturn(List.of(book,book2));
+        when(booksRepository.save(book)).thenReturn(book);
+        when(booksRepository.save(book2)).thenReturn(book2);
+
+        List<BooksDTO> books = booksService.getAllBooks();
+        Page<BooksDTO> bookPage = new PageImpl<>(books, pageable, books.size());
+
+        when(booksService.getAll100Books(pageable)).thenReturn(bookPage);
 
         booksService.createBook(booksService.convertToDTO(book));
         booksService.createBook(booksService.convertToDTO(book2));
 
-        List<BooksDTO> booksOf100 = booksService.getAll100Books();
+        Page<BooksDTO> booksOf100 = booksService.getAll100Books(pageable);
 
-        assertThat(booksOf100.size()).isEqualTo(2);
-
+        assertNotNull(booksOf100);
+        assertEquals(0, booksOf100.getNumber());
+        assertEquals(5, booksOf100.getSize());
     }
 
 }

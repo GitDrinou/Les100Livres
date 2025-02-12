@@ -53,7 +53,7 @@ public class BooksController {
     @CrossOrigin
     @GetMapping("/others")
     @Operation(summary = "Récupérer la liste des autrss livres", description = "Retourne tous les autres livres enregistrés")
-    public Page<BooksDTO> getAllOtherBooks(@PageableDefault(size = 10, sort = "title", direction = Sort.Direction.ASC) Pageable pageable) {
+    public Page<BooksDTO> getAllOtherBooks(@PageableDefault(size = 5, sort = "title", direction = Sort.Direction.ASC) Pageable pageable) {
         return booksService.getAllOtherBooks(pageable);
     }
 

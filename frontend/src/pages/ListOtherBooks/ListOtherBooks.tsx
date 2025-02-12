@@ -17,7 +17,7 @@ const ListOtherBooks = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
-    const pageSize = 10;
+    const pageSize = 5;
     const url = `http://localhost:8080/books/others?page=${page}&size=${pageSize}`;
     const apiMethod = "GET";
 
