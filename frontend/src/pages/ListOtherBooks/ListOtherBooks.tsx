@@ -7,7 +7,7 @@ import CallAPI from "../../hooks/CallAPI";
 // @ts-ignore
 import styles from "./ListOtherBooks.module.css";
 import {sortedByTitleByIsRead} from "../../scripts/utilities";
-import {Book} from "../../types/Books";
+import {Book} from "../../types/Types";
 import Pagination from "../../components/Pagination/Pagination";
 
 const ListOtherBooks = () => {

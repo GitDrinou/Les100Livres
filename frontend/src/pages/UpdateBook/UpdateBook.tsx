@@ -5,6 +5,7 @@ import * as React from "react";
 // @ts-ignore
 import styles from "./UpdateBook.module.css";
 import {useParams} from "react-router-dom";
+import {Book} from "../../types/Types";
 
 const UpdateBook = () => {
     const param= useParams();
@@ -12,16 +13,16 @@ const UpdateBook = () => {
     let apiMethod = "GET";
 
     const initialData = {
+        id: Number(param.bookId),
         title: "",
         author: "",
         publicationDate: "",
         isbn: "",
         description: "",
-        type100: "0",
+        type100: "1",
         is_read: "0"
     }
 
-    //const [formData, setFormData] = useState(initialData);
     const [data, setData] = useState(initialData);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);

@@ -78,6 +78,7 @@ public class BooksController {
         return booksService.updateBook(bookId, book);
     }
 
+    @CrossOrigin
     @DeleteMapping("/{bookId}")
     @Operation(summary = "Supprime un livre (par son identifiant)")
     public void deleteBook(@PathVariable Integer bookId) {

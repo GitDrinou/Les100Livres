@@ -1,13 +1,15 @@
+import {CallAPIParams} from "../types/Types.ts";
+
 const CallAPI = ({
                      url,
                      apiMethod,
-                     body = null,
+                     body,
                      headers = {},
                      setData,
-    setTotalPages,
+                     setTotalPages,
                      setLoading,
                      setError
-}) => {
+}: CallAPIParams) => {
 
 
 
@@ -35,8 +37,8 @@ const CallAPI = ({
 
                 const data = await response.json();
 
-                setData(data.content ? data.content: data);
-                setTotalPages(data.totalPages);
+                setData?.(data.content ? data.content: data);
+                setTotalPages?.(data.totalPages);
             } catch (error) {
                 console.error(error);
                 if (setError) setError(true);

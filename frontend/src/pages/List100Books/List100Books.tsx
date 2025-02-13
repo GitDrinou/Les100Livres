@@ -6,7 +6,7 @@ import CallAPI from "../../hooks/CallAPI";
 // @ts-ignore
 import styles from "./Liist100Books.module.css";
 import {sortedByTitleByIsRead} from "../../scripts/utilities";
-import {Book} from "../../types/Books";
+import {Book} from "../../types/Types";
 import Pagination from "../../components/Pagination/Pagination";
 
 
