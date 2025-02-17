@@ -28,8 +28,9 @@ const BookCard = (props: {
     }
 
     const handleClickDelete = () => {
-        console.log(props.bookId);
-        CallAPI({url, apiMethod});
+        const body = null;
+        CallAPI({url, apiMethod, body});
+        document.location.href='/other-books';
     }
 
     return (

@@ -17,7 +17,6 @@ const CallAPI = ({
 
             if (setLoading) setLoading(true);
             if (body) body = JSON.stringify(body);
-
             const options = {
                 method: apiMethod,
                 headers: {
@@ -35,10 +34,12 @@ const CallAPI = ({
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
 
-                const data = await response.json();
+                if (apiMethod != "DELETE") {
+                    const data = await response.json();
+                    setData?.(data.content ? data.content: data);
+                    setTotalPages?.(data.totalPages);
+                }
 
-                setData?.(data.content ? data.content: data);
-                setTotalPages?.(data.totalPages);
             } catch (error) {
                 console.error(error);
                 if (setError) setError(true);

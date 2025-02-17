@@ -8,15 +8,15 @@ export interface Book {
     isbn: string;
     description: string;
     type100: string;
-    is_read: string;
+    isRead: string;
 }
 
 export type CallAPIParams = {
     url: string;
     apiMethod: string;
-    body?: Book;
+    body: string | Book | null;
     headers?: {};
-    setData?: Dispatch<SetStateAction<Book>;
+    setData?: Dispatch<SetStateAction<Book[]>>;
     setTotalPages?: (totalPages: number) => void;
     setLoading?: (loading: boolean) => void;
     setError?: (error: boolean) => void;
