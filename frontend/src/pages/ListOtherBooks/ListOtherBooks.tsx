@@ -12,6 +12,7 @@ import Pagination from "../../components/Pagination/Pagination";
 const ListOtherBooks = () => {
     const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(1);
+    const [totalBooks, setTotalBooks] = useState(0);
     const [data, setData] = useState<Book[]>([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -22,7 +23,7 @@ const ListOtherBooks = () => {
 
 
     useEffect(() => {
-        CallAPI({url, apiMethod, setData, setTotalPages, setLoading, setError});
+        CallAPI({url, apiMethod, setData, setTotalPages, setTotalBooks, setLoading, setError});
     }, [page]);
 
     const sortedDatas = sortedByTitleByIsRead(data);
@@ -31,10 +32,11 @@ const ListOtherBooks = () => {
         <>
             <Menu />
             <div className={styles.otherBook}>
-                <h1>Liste d'autres livres</h1>
+                <h1>Liste d'autres livres ({totalBooks})</h1>
                 <p>
-                    Cette liste est en plus de celle des 100 livres à lire dans sa vie.<br/>
-                    Ce sont des livres que j'ai lu et que je conseillerais de lire (surtout les "Werber", parce que j'en suis fan).
+                    En plus des 100 livres à livre dans sa vie, cette liste regroupe d'autres livres à lire, que j'ai lu et apprécié.<br/>
+                    Ils ne font pas partie de la liste des 100, mais ils auraient pu y être.<br/>
+                    Bonne lecture !
                 </p>
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }

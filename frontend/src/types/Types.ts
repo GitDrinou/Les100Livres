@@ -8,7 +8,7 @@ export interface Book {
     isbn: string;
     description: string;
     type100: string;
-    isRead: string;
+    is_read: string;
 }
 
 export type CallAPIParams = {
@@ -16,8 +16,9 @@ export type CallAPIParams = {
     apiMethod: string;
     body?: string | Book | null;
     headers?: {};
-    setData?: Dispatch<SetStateAction<Book[]>>;
+    setData?: Dispatch<SetStateAction<Book[]>> |  Dispatch<SetStateAction<Book>>;
     setTotalPages?: (totalPages: number) => void;
+    setTotalBooks?: (totalBooks: number) => void;
     setLoading?: (loading: boolean) => void;
     setError?: (error: boolean) => void;
 };

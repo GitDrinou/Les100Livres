@@ -5,9 +5,10 @@ import * as React from "react";
 // @ts-ignore
 import styles from "./UpdateBook.module.css";
 import {useParams} from "react-router-dom";
+import {Book} from "../../types/Types";
 
 const UpdateBook = () => {
-    const param= useParams();
+    const param = useParams();
     const url = "http://localhost:8080/books/" + param.bookId;
     let apiMethod = "GET";
 
@@ -19,10 +20,10 @@ const UpdateBook = () => {
         isbn: "",
         description: "",
         type100: "1",
-        isRead: "0"
+        is_read: "0"
     }
 
-    const [data, setData] = useState(initialData);
+    const [data, setData] = useState<Book>(initialData);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
@@ -135,8 +136,8 @@ const UpdateBook = () => {
                             <select id="isRead"
                                     name="isRead"
                                     onChange={handleChange}>
-                                <option value="0" selected={data.isRead === "0"}>Non</option>
-                                <option value="1" selected={data.isRead === "1"}>Oui</option>
+                                <option value="0" selected={data.is_read === "0"}>Non</option>
+                                <option value="1" selected={data.is_read === "1"}>Oui</option>
                             </select>
                         </div>
                     </div>

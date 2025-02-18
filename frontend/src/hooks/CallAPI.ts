@@ -7,6 +7,7 @@ const CallAPI = ({
                      headers = {},
                      setData,
                      setTotalPages,
+                     setTotalBooks,
                      setLoading,
                      setError
 }: CallAPIParams) => {
@@ -38,6 +39,7 @@ const CallAPI = ({
                     const data = await response.json();
                     setData?.(data.content ? data.content: data);
                     setTotalPages?.(data.totalPages);
+                    setTotalBooks?.(data.totalElements);
                 }
 
             } catch (error) {

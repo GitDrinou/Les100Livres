@@ -27,14 +27,14 @@ const List100Books = () => {
     }, [page]);
 
     const sortedDatas = sortedByTitleByIsRead(data);
-
+console.log(data);
     const displayCounter = () => {
         let countRead = 0;
         const totalCount = 100;
 
         if (!loading){
             for (const book of data) {
-                if (book.isRead ==="1") {
+                if (book.is_read ==="1") {
                     countRead++;
                 }
             }
