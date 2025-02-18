@@ -12,11 +12,11 @@
     height: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 25px;
     font-size: 1.2rem;
+    grid-gap: 10px;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to right, brown, #CCCCCC);
+    background: brown;
     border-bottom: 1px solid #717376;
     border-radius: 0 0 10px 10px;
 }
@@ -26,14 +26,30 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 5px;
-    border-right: 2px solid white;
+    padding: 5px 5px 5px 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .nav-header > a:hover {
     text-decoration: underline;
 }
 
+.admin-link{
+    text-align: right;
+    margin-top:5px;
+    font-weight: bold;
+}
+
+.admin-link > a {
+    text-decoration: none;
+    color: black;
+}
+
+.admin-link > a:hover {
+    text-decoration: underline;
+}
 
 @media (max-width: 600px){
     .logo {
@@ -48,11 +64,7 @@
         padding-bottom: 16px;
         justify-items: center;
         font-size: 1rem;
-        background: linear-gradient(to bottom, brown, #CCCCCC);
+        background: brown;
     }
-    .nav-header > a,
-    .nav-header > a:visited {
-        color: black;
-        border-right: 0;
-    }
+
 }

@@ -17,4 +17,5 @@ public interface BooksService {
    Book createBook(Book book);
    ResponseEntity<BooksDTO> updateBook(int id, Book book);
    void deleteBook(Integer bookId);
+   void uploadBooks(List<Book> books);
 }

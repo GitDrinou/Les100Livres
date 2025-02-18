@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 import BookCard from "../../components/BookCard/BookCard";
 import * as React from "react";
 import Menu from "../../components/Menu/Menu";
-import Buttons from "../../components/Submenu/Submenu";
 import CallAPI from "../../hooks/CallAPI";
 // @ts-ignore
 import styles from "./ListOtherBooks.module.css";
@@ -31,7 +30,6 @@ const ListOtherBooks = () => {
     return (
         <>
             <Menu />
-            <Buttons />
             <div className={styles.otherBook}>
                 <h1>Liste d'autres livres</h1>
                 <p>

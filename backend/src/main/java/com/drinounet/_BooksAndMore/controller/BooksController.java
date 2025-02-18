@@ -66,9 +66,16 @@ public class BooksController {
 
     @CrossOrigin
     @PostMapping
-    @Operation(summary = "Enregistre les informations d'un livre", description = "Retourne toutes les infos du livre enregistré")
+    @Operation(summary = "Enregistre un livre", description = "Retourne toutes les infos du livre enregistré")
     public Book createBook(@RequestBody Book book) {
         return booksService.createBook(book);
+    }
+
+    @CrossOrigin
+    @PostMapping("/all")
+    @Operation(summary = "Enregistre tous les livres", description = "Retourne toutes les infos de l'ensemble des livres")
+    public void uploadBooks(@RequestBody List<Book> books) {
+        booksService.uploadBooks(books);
     }
 
     @CrossOrigin

@@ -14,7 +14,7 @@ export interface Book {
 export type CallAPIParams = {
     url: string;
     apiMethod: string;
-    body: string | Book | null;
+    body?: string | Book | null;
     headers?: {};
     setData?: Dispatch<SetStateAction<Book[]>>;
     setTotalPages?: (totalPages: number) => void;

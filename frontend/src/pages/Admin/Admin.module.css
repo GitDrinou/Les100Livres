@@ -1,9 +1,15 @@
-.submenu {
-    padding: 20px 10px;
-    display: flex;
-    justify-content: flex-end;
-    border-bottom: 1px solid #282C34;
+.App {
+    color:  #282C34;
+    min-height: 100vh;
+    padding: 10px;
+}
 
+.App-main {
+    display: flex;
+}
+
+h1 {
+    font-size: 1.8rem;
 }
 
 .button-link {

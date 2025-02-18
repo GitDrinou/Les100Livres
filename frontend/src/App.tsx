@@ -5,6 +5,7 @@ import AddBook from "./pages/AddBook/AddBook";
 import Home from "./pages/Home/Home";
 import List100Books from "./pages/List100Books/List100Books";
 import UpdateBook from "./pages/UpdateBook/UpdateBook";
+import Admin from "./pages/Admin/Admin";
 
 const App = () => {
 
@@ -16,6 +17,7 @@ const App = () => {
                    <Route path={"/other-books"} element={<ListOtherBooks/>} />
                    <Route path={"/add-book"} element={<AddBook/>} />
                    <Route path={"/update-book/:bookId"} element={<UpdateBook/>} />
+                   <Route path={"/admin"} element={<Admin/>} />
                </Routes>
            </BrowserRouter>
        )

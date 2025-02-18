@@ -8,6 +8,7 @@ import styles from "./Liist100Books.module.css";
 import {sortedByTitleByIsRead} from "../../scripts/utilities";
 import {Book} from "../../types/Types";
 import Pagination from "../../components/Pagination/Pagination";
+import * as url from "node:url";
 
 
 const List100Books = () => {
@@ -33,7 +34,7 @@ const List100Books = () => {
 
         if (!loading){
             for (const book of data) {
-                if (book.is_read ==="1") {
+                if (book.isRead ==="1") {
                     countRead++;
                 }
             }

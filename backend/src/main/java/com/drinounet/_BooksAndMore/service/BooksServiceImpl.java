@@ -73,6 +73,14 @@ public class BooksServiceImpl  implements BooksService {
         }
     }
 
+    @Override
+    public void uploadBooks(List<Book> books) {
+        for (Book book : books) {
+            BooksDTO bookDTO = convertToEntity(book);
+            booksRepository.save(bookDTO);
+        }
+    }
+
     private boolean isBookExist(Book book) {
         List<BooksDTO> books =  getAllBooks();
         for (BooksDTO existedBook : books) {
