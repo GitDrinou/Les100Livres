@@ -39,7 +39,7 @@ public class BooksServiceImpl  implements BooksService {
     }
 
     @Override
-    public Optional<BooksDTO> getBookById(int bookId) {
+    public Optional<BooksDTO> getBookById(Integer bookId) {
         return Optional.ofNullable(booksRepository.findById(bookId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid book id " + bookId)));
     }
@@ -68,9 +68,9 @@ public class BooksServiceImpl  implements BooksService {
 
     @Override
     public void deleteBook(Integer bookId) {
-        if (booksRepository.existsById(bookId)) {
+       if (booksRepository.existsById(bookId)) {
             booksRepository.deleteById(bookId);
-        }
+       }
     }
 
     @Override

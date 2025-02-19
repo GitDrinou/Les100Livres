@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">4</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.055s</div>
+<div class="counter">0.073s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,8 +81,23 @@
 </tr>
 </thead>
 <tr>
+<td class="success">verify_the_delete_of_an_identified_book()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">verify_the_detail_of_an_identified_book()</td>
+<td class="success">0.029s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">verify_the_size_of_the_100_list_when_adding_2_new_books()</td>
+<td class="success">0.036s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">verify_the_update_of_an_identified_book()</td>
-<td class="success">0.055s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,8 +105,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>13:20:29.922 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.drinounet._BooksAndMore.service.BooksServiceImplTest]: BooksServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-13:20:29.968 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.drinounet._BooksAndMore.BooksApplication for test class com.drinounet._BooksAndMore.service.BooksServiceImplTest
+<pre>17:04:23.885 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.drinounet._BooksAndMore.service.BooksServiceImplTest]: BooksServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:04:23.943 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.drinounet._BooksAndMore.BooksApplication for test class com.drinounet._BooksAndMore.service.BooksServiceImplTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -102,23 +117,23 @@
 
  :: Spring Boot ::                (v3.4.0)
 
-2025-02-12T13:20:30.109+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] c.d._.service.BooksServiceImplTest       : Starting BooksServiceImplTest using Java 21.0.4 with PID 73058 (started by sandrine.brival in /Users/sandrine.brival/01 - Formation/JAVA/Les100livres/backend)
-2025-02-12T13:20:30.109+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] c.d._.service.BooksServiceImplTest       : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-02-12T13:20:30.361+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-02-12T13:20:30.362+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2025-02-12T13:20:30.375+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.drinounet._BooksAndMore.repository.BooksRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-02-12T13:20:30.376+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
-2025-02-12T13:20:30.380+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-02-12T13:20:30.380+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-12T13:20:30.395+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
-2025-02-12T13:20:30.570+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-12T13:20:30.649+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@17d2b646
-2025-02-12T13:20:30.649+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-12T13:20:30.746+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-12T13:20:30.766+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
-2025-02-12T13:20:30.777+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-02-12T13:20:30.867+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-12T13:20:30.898+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-02-19T17:04:24.090+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] c.d._.service.BooksServiceImplTest       : Starting BooksServiceImplTest using Java 21.0.4 with PID 4096 (started by sandrine.brival in /Users/sandrine.brival/01 - Formation/JAVA/Les100livres/backend)
+2025-02-19T17:04:24.091+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] c.d._.service.BooksServiceImplTest       : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-02-19T17:04:24.395+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-19T17:04:24.395+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-02-19T17:04:24.411+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.drinounet._BooksAndMore.repository.BooksRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-19T17:04:24.411+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2025-02-19T17:04:24.416+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-19T17:04:24.417+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-19T17:04:24.435+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2025-02-19T17:04:24.621+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-19T17:04:24.754+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@416a4275
+2025-02-19T17:04:24.755+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-19T17:04:24.892+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-19T17:04:24.912+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-02-19T17:04:24.923+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-19T17:04:25.014+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-19T17:04:25.044+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 17.2
@@ -126,11 +141,11 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-02-12T13:20:31.199+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-12T13:20:31.216+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-12T13:20:31.396+01:00  WARN 73058 --- [100-Livres-Et-Plus] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-02-12T13:20:31.404+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2025-02-12T13:20:31.581+01:00  INFO 73058 --- [100-Livres-Et-Plus] [    Test worker] c.d._.service.BooksServiceImplTest       : Started BooksServiceImplTest in 1.568 seconds (process running for 2.116)
+2025-02-19T17:04:25.337+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-19T17:04:25.356+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-19T17:04:25.539+01:00  WARN 4096 --- [100-Livres-Et-Plus] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-19T17:04:25.548+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2025-02-19T17:04:25.742+01:00  INFO 4096 --- [100-Livres-Et-Plus] [    Test worker] c.d._.service.BooksServiceImplTest       : Started BooksServiceImplTest in 1.757 seconds (process running for 2.4)
 </pre>
 </span>
 </div>
@@ -153,7 +168,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at 12 févr. 2025, 13:20:32</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at 19 févr. 2025, 17:04:26</p>
 </div>
 </div>
 </body>

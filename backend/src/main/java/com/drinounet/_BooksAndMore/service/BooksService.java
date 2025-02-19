@@ -13,7 +13,7 @@ public interface BooksService {
    List<BooksDTO> getAllBooks();
    Page<BooksDTO> getAll100Books(Pageable pageable);
    Page<BooksDTO> getAllOtherBooks(Pageable pageable);
-   Optional<BooksDTO> getBookById(int id);
+   Optional<BooksDTO> getBookById(Integer id);
    Book createBook(Book book);
    ResponseEntity<BooksDTO> updateBook(int id, Book book);
    void deleteBook(Integer bookId);

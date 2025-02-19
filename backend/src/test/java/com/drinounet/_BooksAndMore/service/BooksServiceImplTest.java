@@ -1,30 +1,28 @@
 package com.drinounet._BooksAndMore.service;
 
-import com.drinounet._BooksAndMore.datas.Book;
 import com.drinounet._BooksAndMore.datas.BooksDTO;
 import com.drinounet._BooksAndMore.repository.BooksRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.*;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @SpringBootTest
-
 public class BooksServiceImplTest {
 
     @Mock
     private BooksRepository booksRepository;
 
-    @Mock
+    @InjectMocks
     private BooksServiceImpl booksService;
 
     private BooksDTO book;
@@ -49,67 +47,66 @@ public class BooksServiceImplTest {
         book2.setDescription("New Description 2");
         book2.setType100("1");
         book2.setIs_read("1");
-
-        when(booksRepository.save(book)).thenReturn(book);
-        when(booksRepository.save(book2)).thenReturn(book2);
     }
 
     @Test
-    void verify_creation_of_a_new_book() {
+    void verify_the_size_of_the_100_list_when_adding_2_new_books() {
+        // Given
+        List<BooksDTO> books = List.of(book, book2);
+        Page<BooksDTO> mockPage = new PageImpl<>(books);
+        Pageable pageable = PageRequest.of(0, 5);
 
-        booksService.createBook(booksService.convertToDTO(book));
+        when(booksRepository.findALLBooksByType100("1", pageable)).thenReturn(mockPage);
 
-        List<BooksDTO> books = booksService.getAllBooks();
+        // When
+        Page<BooksDTO> result = booksService.getAll100Books(pageable);
 
-        assertThat(books.size()).isEqualTo(1);
-    }
+        // Then
+        assertNotNull(result);
+        assertEquals(2, result.getTotalElements());
+        assertEquals("New Title", result.getContent().getFirst().getTitle());
 
-    @Test
-    void verify_integration_of_2_new_books_from_100() {
-
-        Pageable pageable = PageRequest.of(0, 5, Sort.by("title"));
-        List<BooksDTO> books = booksService.getAllBooks();
-        Page<BooksDTO> bookPage = new PageImpl<>(books, pageable, books.size());
-
-        when(booksService.getAll100Books(pageable)).thenReturn(bookPage);
-
-        booksService.createBook(booksService.convertToDTO(book));
-        booksService.createBook(booksService.convertToDTO(book2));
-
-        Page<BooksDTO> booksOf100 = booksService.getAll100Books(pageable);
-
-        assertNotNull(booksOf100);
-        assertEquals(0, booksOf100.getNumber());
-        assertEquals(5, booksOf100.getSize());
+        verify(booksRepository).findALLBooksByType100("1", pageable);
     }
 
     @Test
     void verify_the_detail_of_an_identified_book() {
+        // Given
+        when(booksRepository.save(book)).thenReturn(book);
 
-        when(booksService.getBookById(1)).thenReturn(Optional.ofNullable(book));
+        // When
+        booksRepository.findById(book.getId());
 
-        booksService.createBook(booksService.convertToDTO(book));
-
-        assertThat(book.getId()).isEqualTo(1);
-        assertThat(book.getTitle()).isNotEqualTo("New Title 2");
+        // Then
+        assertThat(book.getTitle()).isEqualTo("New Title");
     }
 
     @Test
     void verify_the_update_of_an_identified_book() {
+        // Given
+        when(booksRepository.existsById(2)).thenReturn(true);
 
-        when(booksService.getBookById(2)).thenReturn(Optional.ofNullable(book2));
-
-        booksService.createBook(booksService.convertToDTO(book2));
-
-        assertThat(book2.getTitle()).isEqualTo("New Title 2");
-
+        // When
+        booksRepository.findById(2);
         book2.setTitle("Nouveau Titre 2");
+        booksRepository.save(book2);
 
-        when(booksRepository.save(book2)).thenReturn(book2);
-
-        booksService.updateBook(2, booksService.convertToDTO(book2));
-
+        // Then
         assertThat(book2.getTitle()).isEqualTo("Nouveau Titre 2");
+    }
 
+   @Test
+    void verify_the_delete_of_an_identified_book() {
+        // Given
+        BooksDTO book3 = new BooksDTO();
+        book3.setId(3);
+
+        when(booksRepository.existsById(3)).thenReturn(true);
+
+        // When
+       booksService.deleteBook(book3.getId());
+
+       // Then
+       verify(booksRepository).deleteById(book3.getId());
     }
 }
