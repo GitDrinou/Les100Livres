@@ -12,6 +12,13 @@ h1 {
     font-size: 1.8rem;
 }
 
+.buttons-container {
+    border: 1px solid red;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+}
+
 .button-link {
     border: none;
     background-color: black;
@@ -20,4 +27,5 @@ h1 {
     font-size: 1.3rem;
     padding: 10px;
     text-decoration:none;
+    margin: 0;
 }

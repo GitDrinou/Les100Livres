@@ -3,12 +3,17 @@ package com.drinounet._BooksAndMore.service;
 import com.drinounet._BooksAndMore.datas.Book;
 import com.drinounet._BooksAndMore.datas.BooksDTO;
 import com.drinounet._BooksAndMore.repository.BooksRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,8 +21,9 @@ import java.util.Optional;
 public class BooksServiceImpl  implements BooksService {
 
     private final BooksRepository booksRepository;
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public BooksServiceImpl(BooksRepository booksRepository) {
+    public BooksServiceImpl(BooksRepository booksRepository, ObjectMapper objectMapper) {
         this.booksRepository = booksRepository;
     }
 
@@ -58,7 +64,7 @@ public class BooksServiceImpl  implements BooksService {
 
     @Override
     public ResponseEntity<BooksDTO> updateBook(int bookId, Book book) {
-        BooksDTO currentBook = booksRepository.findById(bookId).orElseThrow(() -> new IllegalArgumentException("Invalid book id " + bookId));
+        BooksDTO currentBook;
         currentBook = convertToEntity(book);
 
         BooksDTO updatedBook = booksRepository.save(currentBook);
@@ -74,11 +80,13 @@ public class BooksServiceImpl  implements BooksService {
     }
 
     @Override
-    public void uploadBooks(List<Book> books) {
-        for (Book book : books) {
-            BooksDTO bookDTO = convertToEntity(book);
-            booksRepository.save(bookDTO);
+    public List<BooksDTO> uploadBooks() throws IOException {
+        InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("data/books.json");
+        if (inputStream == null) {
+            return null;
         }
+        return objectMapper.readValue(inputStream, new TypeReference<>() {});
+
     }
 
     private boolean isBookExist(Book book) {

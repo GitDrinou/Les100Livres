@@ -27,7 +27,7 @@ const List100Books = () => {
     }, [page]);
 
     const sortedDatas = sortedByTitleByIsRead(data);
-console.log(data);
+
     const displayCounter = () => {
         let countRead = 0;
         const totalCount = 100;

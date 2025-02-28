@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,5 +18,5 @@ public interface BooksService {
    Book createBook(Book book);
    ResponseEntity<BooksDTO> updateBook(int id, Book book);
    void deleteBook(Integer bookId);
-   void uploadBooks(List<Book> books);
+   List<BooksDTO> uploadBooks() throws IOException;
 }

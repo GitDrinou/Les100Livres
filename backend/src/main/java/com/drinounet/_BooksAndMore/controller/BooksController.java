@@ -2,6 +2,7 @@ package com.drinounet._BooksAndMore.controller;
 
 import com.drinounet._BooksAndMore.datas.Book;
 import com.drinounet._BooksAndMore.datas.BooksDTO;
+import com.drinounet._BooksAndMore.repository.BooksRepository;
 import com.drinounet._BooksAndMore.service.BooksService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -22,9 +23,11 @@ import java.util.Optional;
 public class BooksController {
 
     private final BooksService booksService;
+    private final BooksRepository booksRepository;
 
-    public BooksController(BooksService booksService) {
+    public BooksController(BooksService booksService, BooksRepository booksRepository) {
         this.booksService = booksService;
+        this.booksRepository = booksRepository;
     }
 
     @CrossOrigin
@@ -72,10 +75,18 @@ public class BooksController {
     }
 
     @CrossOrigin
-    @PostMapping("/all")
+    @PostMapping("/upload")
     @Operation(summary = "Enregistre tous les livres", description = "Retourne toutes les infos de l'ensemble des livres")
-    public void uploadBooks(@RequestBody List<Book> books) {
-        booksService.uploadBooks(books);
+    public String uploadBooks() {
+        try{
+           List<BooksDTO> books = booksService.uploadBooks();
+            booksRepository.saveAll(books);
+            return "success";
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return "Error : " + e.getMessage();
+        }
     }
 
     @CrossOrigin
