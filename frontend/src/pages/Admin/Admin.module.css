@@ -13,19 +13,7 @@ h1 {
 }
 
 .buttons-container {
-    border: 1px solid red;
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-}
-
-.button-link {
-    border: none;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    font-size: 1.3rem;
-    padding: 10px;
-    text-decoration:none;
-    margin: 0;
 }

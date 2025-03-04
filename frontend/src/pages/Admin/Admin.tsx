@@ -5,6 +5,7 @@ import styles from "./Admin.module.css";
 import { useEffect, useState } from "react";
 import { Book } from "../../types/Types";
 import CallAPI from "../../hooks/CallAPI";
+import ButtonCard from "../../components/ButtonCard/ButtonCard";
 
 const Admin = () => {
     const [data, setData] = useState<Book[]>([]);
@@ -41,8 +42,25 @@ const Admin = () => {
                 <h1>Administration</h1>
                 <main className={styles["App-main"]}>
                     <div className={styles["buttons-container"]}>
-                        <button className={styles["button-link"]} onClick={() => document.location.href = "/add-book"}>Ajouter un autre livre</button>
-                        {data.length === 0 && <button className={styles["button-link"]} onClick={handleUploadBooks}>Charger les livres</button>}
+                        <ButtonCard
+                          description={"Cliquez ici, si vous voulez ajouter un nouveau livre dans la catégorie" +
+                            " 'Autres'."}
+                          label={"Ajouter un livre"}
+                          actionButton={() => document.location.href = "/add-book"}
+                        />
+                        <ButtonCard
+                          description={"Cliquez ici, si vous voulez mettre à jour un livre."}
+                          label={"Modifier un livre"}
+                          actionButton={() => document.location.href = "/update-a-book"}
+                        />
+                        {data.length === 0 &&
+                          <ButtonCard
+                            description={"Cliquez ici, si tous les livres ne sont pas chargés dans les pages de" +
+                              " présentation."}
+                            label={"Charger les livres"}
+                            actionButton={handleUploadBooks}
+                          />
+                        }
                     </div>
 
                 </main>

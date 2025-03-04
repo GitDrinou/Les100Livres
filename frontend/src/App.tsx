@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import List100Books from "./pages/List100Books/List100Books";
 import UpdateBook from "./pages/UpdateBook/UpdateBook";
 import Admin from "./pages/Admin/Admin";
+import UpdateABook from "./pages/UpdateABook/UpdateABook";
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
                    <Route path={"/other-books"} element={<ListOtherBooks/>} />
                    <Route path={"/add-book"} element={<AddBook/>} />
                    <Route path={"/update-book/:bookId"} element={<UpdateBook/>} />
+                   <Route path={"/update-a-book"} element={<UpdateABook/>} />
                    <Route path={"/admin"} element={<Admin/>} />
                </Routes>
            </BrowserRouter>
