@@ -45,17 +45,22 @@
 }
 
 .block-status{
-   height: 80px;
+   height: 60px;
     background-color: #d8d6d6;
     border-radius: 0 0 10px 10px;
     display: grid;
     grid-template-columns: 50px 50px;
     justify-content: space-between;
     padding: 0 20px;
+    margin: 0;
     align-items: center;
 }
 
+.block-status > img {
+    width: 40px;
+}
 .block-status > img[id="icon_update"],
 .block-status > img[id="icon_delete"]{
     cursor: pointer;
+
 }

@@ -1,3 +1,4 @@
+import * as React from "react";
 import Menu from "../../components/Menu/Menu";
 // @ts-ignore
 import styles from './Home.module.css';

@@ -1,18 +1,17 @@
 import {CallAPIParams} from "../types/Types.ts";
 
 const CallAPI = ({
-                     url,
-                     apiMethod,
-                     body,
-                     headers = {},
-                     setData,
-                     setTotalPages,
-                     setTotalBooks,
-                     setLoading,
-                     setError
+                   url,
+                   apiMethod,
+                   body,
+                   headers = {},
+                   setData,
+                   setDataAllBooks,
+                   setTotalPages,
+                   setTotalBooks,
+                   setLoading,
+                   setError
 }: CallAPIParams) => {
-
-
 
         const fetchData = async () =>  {
 
@@ -38,6 +37,7 @@ const CallAPI = ({
                 if (apiMethod != "DELETE") {
                     const data = await response.json();
                     setData?.(data.content ? data.content: data);
+                    setDataAllBooks?.(data.content ? data.content: data);
                     setTotalPages?.(data.totalPages);
                     setTotalBooks?.(data.totalElements);
                 }

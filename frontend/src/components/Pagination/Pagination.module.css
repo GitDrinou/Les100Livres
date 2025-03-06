@@ -2,8 +2,8 @@
     margin: 20px 00;
     text-align: right;
     padding: 10px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    background-color: lightgray;
+    border-radius: 15px;
 }
 
 button {

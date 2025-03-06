@@ -1,3 +1,5 @@
+import {Book} from "../types/Types";
+
 export const sortedByTitleByIsRead = (items) => {
     return items.sort((a, b) => {
         if (a.is_read !== b.is_read) {
@@ -9,4 +11,18 @@ export const sortedByTitleByIsRead = (items) => {
 
         return 0;
     })
+}
+
+export const sortedByAuthor = (items: Book[]) => {
+    const authors: string[] =  [];
+    items.map((item) => (
+      authors.push(item.author)
+    ));
+
+    return authors.reduce((acc, value) => {
+        if (!acc.includes(value)) {
+            acc.push(value);
+        }
+        return acc.sort();
+    }, []);
 }

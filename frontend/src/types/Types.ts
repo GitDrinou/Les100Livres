@@ -17,6 +17,7 @@ export type CallAPIParams = {
     body?: string | Book | null;
     headers?: {};
     setData?: Dispatch<SetStateAction<Book[]>> |  Dispatch<SetStateAction<Book>>;
+    setDataAllBooks?: Dispatch<SetStateAction<Book[]>> |  Dispatch<SetStateAction<Book>>;
     setTotalPages?: (totalPages: number) => void;
     setTotalBooks?: (totalBooks: number) => void;
     setLoading?: (loading: boolean) => void;
