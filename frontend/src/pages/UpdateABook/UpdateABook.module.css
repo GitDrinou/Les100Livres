@@ -20,6 +20,8 @@ h1 {
 
 .book-table {
     width: 70%;
+    /*height: auto;*/
+    /*overflow: scroll;*/
 
     tbody > tr > td:first-child {
         width: 10%;

@@ -26,3 +26,12 @@ export const sortedByAuthor = (items: Book[]) => {
         return acc.sort();
     }, []);
 }
+
+export const sortedByTitle = (items: Book[]) => {
+    return items.sort((a, b) => {
+        if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
+        if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
+
+        return 0;
+    })
+}
