@@ -6,6 +6,8 @@ import styles from './Home.module.css';
 import ImgAffiche from "../../assets/images/img-equalizer.webp";
 
 const Home = () => {
+
+
     return (
         <>
             <Menu />

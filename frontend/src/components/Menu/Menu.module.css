@@ -1,12 +1,18 @@
 .logo {
     display: flex;
     justify-content: center;
+
+    a,
+    a:visited {
+        text-decoration: none;
+    }
+
+    img {
+        display: block;
+        border: 1px solid blue;
+    }
 }
 
-.logo > a,
-.logo > a:visited {
-    text-decoration: none;
-}
 
 .nav-header {
     height: 100px;
