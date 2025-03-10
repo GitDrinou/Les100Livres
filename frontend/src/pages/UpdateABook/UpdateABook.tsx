@@ -23,8 +23,8 @@ const UpdateABook = () => {
   const apiMethod = "GET";
 
   useEffect(() => {
-    CallAPI({url:`http://localhost:8080/books?page=${page}&size=${pageSize}`, apiMethod, setData, setTotalPages, setLoading, setError});
-    CallAPI({url:"http://localhost:8080/books/all", apiMethod, setDataAllBooks, setLoading, setError});
+      CallAPI({url:`http://localhost:8080/books?page=${page}&size=${pageSize}`, apiMethod, setData, setTotalPages, setLoading, setError});
+      CallAPI({url:"http://localhost:8080/books/all", apiMethod, setDataAllBooks, setLoading, setError});
     }, [page]);
 
 
@@ -36,8 +36,13 @@ const UpdateABook = () => {
     const url= `http://localhost:8080/books/filter/${authorSelected.replace(" ", "%20")}`;
 
     CallAPI({url, apiMethod, setData, setLoading, setError});
-    setTotalPages(Math.ceil(data.length / pageSize));
     setFilter(true);
+  }
+
+  const handleReinitFilter = () => {
+    CallAPI({url:`http://localhost:8080/books?page=${page}&size=${pageSize}`, apiMethod, setData, setTotalPages, setLoading, setError});
+    setFilter(false);
+    document.getElementById('author-select')["value"] = "default";
   }
 
   return (
@@ -56,16 +61,16 @@ const UpdateABook = () => {
                   <div className={styles.filter}>
                     <label htmlFor="author-select">Filtrer par auteur:</label>
                     <select name="authors" id="author-select" onChange={handleFilterByAuthor}>
-                        <option>Sélectionner un auteur</option>
-                        <option>Tous les auteurs</option>
+                        <option value={"default"}>Sélectionner un auteur</option>
                         {sortedAllBooksData.map((author:string, index:number) => (
                           <option key={index}>{author}</option>
                         ))}
                     </select>
+                    <span className={styles.reinit}><a href="#" onClick={handleReinitFilter}>Effacer le filtre</a></span>
                   </div>
                   <table className={styles["book-table"]}>
                     <tbody>
-                      {sortedDatas.map((data) => (
+                      {sortedDatas.map((data:Book) => (
                         <tr key={data.title}>
                           <td className={styles.book}><img src={UpdateIcon} id="icon_update" alt="Modifier les élements du livre" title="Modifier" onClick={() =>  document.location.href=`/update-book/${data.id}`}/></td>
                           <td className={styles.book}><span className={styles["book-title"]}>{data.title}</span><br/>{data.author}</td>

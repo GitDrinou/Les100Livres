@@ -47,11 +47,11 @@ const BookCard = (props: {
               {props.isRead === "0" && <img src={UpdateIcon} id="icon_update" alt="Modifier les élements du livre" title="Modifier" onClick={handleClickUpdate}/> }
             </div>
         }
-        {props.type === "0" &&
-            <div className={styles["block-status"]}>
-                <img src={DeleteBook} id="icon_delete" alt="Supprimer le livre" title="Supprimer" onClick={handleClickDelete}/>
-            </div>
-        }
+        {/*{props.type === "0" &&*/}
+        {/*    <div className={styles["block-status"]}>*/}
+        {/*        <img src={DeleteBook} id="icon_delete" alt="Supprimer le livre" title="Supprimer" onClick={handleClickDelete}/>*/}
+        {/*    </div>*/}
+        {/*}*/}
       </div>
     </>
 

@@ -16,6 +16,15 @@ h1 {
     select {
         font-size: 1rem;
     }
+
+    .reinit > a,
+    .reinit > a:hover,
+    .reinit > a:visited {
+        float: right;
+        cursor: pointer;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
 }
 
 .book-table {
