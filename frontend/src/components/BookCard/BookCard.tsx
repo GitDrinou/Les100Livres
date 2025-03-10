@@ -27,12 +27,6 @@ const BookCard = (props: {
     document.location.href=`/update-book/${props.bookId}`;
   }
 
-  const handleClickDelete = () => {
-    const body = null;
-    CallAPI({url, apiMethod, body});
-    document.location.href='/other-books';
-  }
-
   return (
     <>
       <div className={styles.card}>
@@ -47,11 +41,6 @@ const BookCard = (props: {
               {props.isRead === "0" && <img src={UpdateIcon} id="icon_update" alt="Modifier les élements du livre" title="Modifier" onClick={handleClickUpdate}/> }
             </div>
         }
-        {/*{props.type === "0" &&*/}
-        {/*    <div className={styles["block-status"]}>*/}
-        {/*        <img src={DeleteBook} id="icon_delete" alt="Supprimer le livre" title="Supprimer" onClick={handleClickDelete}/>*/}
-        {/*    </div>*/}
-        {/*}*/}
       </div>
     </>
 

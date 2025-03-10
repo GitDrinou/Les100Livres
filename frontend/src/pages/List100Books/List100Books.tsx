@@ -8,7 +8,7 @@ import styles from "./Liist100Books.module.css";
 import {sortedByTitleByIsRead} from "../../scripts/utilities";
 import {Book} from "../../types/Types";
 import Pagination from "../../components/Pagination/Pagination";
-import * as url from "node:url";
+import ReadDonutChart from "../../components/ReadDonutChart/ReadDonutChart";
 
 
 const List100Books = () => {
@@ -30,7 +30,6 @@ const List100Books = () => {
 
     const displayCounter = () => {
         let countRead = 0;
-        const totalCount = 100;
 
         if (!loading){
             for (const book of data) {
@@ -38,10 +37,10 @@ const List100Books = () => {
                     countRead++;
                 }
             }
-            return countRead + "/" + totalCount;
+            return countRead;
         }
 
-        return "";
+        return 0;
     }
 
     return (
@@ -49,13 +48,22 @@ const List100Books = () => {
             <Menu />
             <div className={styles.App}>
                 <h1>Liste des 100 livres à lire</h1>
-                <p>
-                    Cette liste n'est bien évidemment pas exhaustive, mais ce sont les 100 oeuvres à lire dans sa vie.<br/>
-                    On peut y trouver des romans, des nouvelles, des recueils de poèmes, etc...<br/>
-                </p>
-                <div className={styles.counter}>{displayCounter()}</div>
+
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
+
+                <div className={styles.headings}>
+                    <p>
+                        Cette liste n'est bien évidemment pas exhaustive, mais ce sont les 100 oeuvres à lire dans sa vie.<br/>
+                        On peut y trouver des romans, des nouvelles, des recueils de poèmes, etc...<br/>
+                    </p>
+                    <div className={styles.counter}>
+                    <ReadDonutChart
+                      numberRead={displayCounter()}
+                    />
+                </div>
+                </div>
+
                 <Pagination
                     actualPage={page}
                     setPage={setPage}

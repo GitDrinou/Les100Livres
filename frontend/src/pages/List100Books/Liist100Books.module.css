@@ -15,6 +15,11 @@ h1 {
     font-size: 1.8rem;
 }
 
+.headings {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
 p {
     font-size: 1.2rem;
 }
@@ -22,7 +27,5 @@ p {
 .counter {
     display: flex;
     justify-content: flex-end;
-    padding: 0 20px 20px 0;
-    font-size: 1.3rem;
-    font-weight: bold;
+    padding: 0 20px 0 0;
 }
