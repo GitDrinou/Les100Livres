@@ -59,12 +59,13 @@ textarea {
 }
 
 input[type=submit],
-.button-clear{
-    background-color: black;
+.button-clear,
+.button-cancel{
+    background-color: #138d75;
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     margin: 20px 10px 0 0;
     width: fit-content;
@@ -77,7 +78,8 @@ input[type=submit],
     }
 
     input[type=submit] ,
-    .button-clear{
+    .button-clear,
+    .button-cancel {
         width: 100%;
         margin-top: 20px;
     }

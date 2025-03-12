@@ -10,8 +10,8 @@ button {
     padding: 10px;
     border-radius: 10px;
     margin: 0 10px;
-    border: 1px solid #CCCCCC;
-    background-color: brown;
+    border: none;
+    background-color: #138d75;
     color: white;
     cursor: pointer;
 }

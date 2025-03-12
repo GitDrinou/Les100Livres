@@ -4,10 +4,13 @@ import * as React from "react";
 import styles from "./AddBooks.module.css";
 import { useState } from "react";
 import CallAPI from "../../hooks/CallAPI";
+import {useNavigate} from "react-router-dom";
+import {Book} from "../../types/Types";
 
 const AddBook = () => {
     const url = "http://localhost:8080/books";
     const apiMethod = "POST";
+    const navigate = useNavigate();
 
     const initialData = {
         title: "",
@@ -36,13 +39,17 @@ const AddBook = () => {
     const handleSubmit = (event: { preventDefault: () => void; }) => {
        event.preventDefault();
        CallAPI({url, apiMethod, body: data, setData, setLoading, setError});
-       if (!loading || !error) {
+        if (!loading || !error) {
            document.location.href="/other-books";
        }
     }
 
     const handleClear = () => {
         setData(initialData);
+    }
+
+    const handleCancel = ()=> {
+        navigate(-1);
     }
 
     return (
@@ -133,8 +140,9 @@ const AddBook = () => {
                     <div className={styles.row}>
                         <div className={styles["col-label"]}></div>
                         <div className={styles["col-inout"]}>
-                            <input type="button" value="Effacer" className={styles["button-clear"]} onClick={handleClear}/>
+                            <input type="button" className={styles["button-cancel"]} value="Annuler" onClick={handleCancel}/>
                             <input type="submit" value="Enregistrer"/>
+                            <input type="button" value="Effacer" className={styles["button-clear"]} onClick={handleClear}/>
                         </div>
                     </div>
                 </form>

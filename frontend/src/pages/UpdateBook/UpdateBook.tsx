@@ -4,13 +4,15 @@ import Menu from "../../components/Menu/Menu";
 import * as React from "react";
 // @ts-ignore
 import styles from "./UpdateBook.module.css";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {Book} from "../../types/Types";
 
 const UpdateBook = () => {
     const param = useParams();
     const url = "http://localhost:8080/books/" + param.bookId;
     let apiMethod = "GET";
+    const navigate = useNavigate();
+
 
     const initialData = {
         id: Number(param.bookId),
@@ -20,7 +22,7 @@ const UpdateBook = () => {
         isbn: "",
         description: "",
         type100: "1",
-        is_read: "0"
+        isRead: "0"
     }
 
     const [data, setData] = useState<Book>(initialData);
@@ -53,6 +55,10 @@ const UpdateBook = () => {
                 document.location.href="/100-books";
             }
         }
+    }
+
+    const handleCancel = ()=> {
+      navigate(-1);
     }
 
     return (
@@ -136,14 +142,15 @@ const UpdateBook = () => {
                             <select id="isRead"
                                     name="isRead"
                                     onChange={handleChange}>
-                                <option value="0" selected={data.is_read === "0"}>Non</option>
-                                <option value="1" selected={data.is_read === "1"}>Oui</option>
+                                <option value="0" selected={data.isRead === "0"}>Non</option>
+                                <option value="1" selected={data.isRead === "1"}>Oui</option>
                             </select>
                         </div>
                     </div>
                     <div className={styles.row}>
                         <div className={styles["col-label"]}></div>
-                        <div className={styles["col-inout"]}>
+                        <div className={styles["col-input"]}>
+                            <input type="button" className={styles["button-cancel"]} value="Annuler" onClick={handleCancel}/>
                             <input type="submit" value="Enregistrer"/>
                         </div>
                     </div>
