@@ -1,22 +1,11 @@
 .container {
-    margin: 20px 00;
+    margin: 20px 0;
     text-align: right;
     padding: 10px;
-    background-color: lightgray;
+    background-color: #a2d9ce;
     border-radius: 15px;
-}
 
-button {
-    padding: 10px;
-    border-radius: 10px;
-    margin: 0 10px;
-    border: none;
-    background-color: #138d75;
-    color: white;
-    cursor: pointer;
-}
-
-button:disabled {
-    background-color: #CCCCCC;
-    color: #717376;
+    span {
+        padding: 0 10px;
+    }
 }

@@ -6,6 +6,7 @@ import * as React from "react";
 import styles from "./UpdateBook.module.css";
 import {useNavigate, useParams} from "react-router-dom";
 import {Book} from "../../types/Types";
+import ActionButton from "../../components/ActionButton/ActionButton";
 
 const UpdateBook = () => {
     const param = useParams();
@@ -150,8 +151,19 @@ const UpdateBook = () => {
                     <div className={styles.row}>
                         <div className={styles["col-label"]}></div>
                         <div className={styles["col-input"]}>
-                            <input type="button" className={styles["button-cancel"]} value="Annuler" onClick={handleCancel}/>
-                            <input type="submit" value="Enregistrer"/>
+                            <ActionButton
+                              isFromForm={true}
+                              label={"Annuler"}
+                              inputType={"button"}
+                              action={handleCancel}
+                              style={"cancel"}
+                            />
+                            <ActionButton
+                              isFromForm={true}
+                              label={"Enregistrer"}
+                              inputType={"submit"}
+                              style={"submit"}
+                            />
                         </div>
                     </div>
                 </form>

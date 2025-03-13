@@ -7,7 +7,7 @@ import CallAPI from "../../hooks/CallAPI";
 import styles from "./ListOtherBooks.module.css";
 import {sortedByTitleByIsRead} from "../../scripts/utilities";
 import {Book} from "../../types/Types";
-import Pagination from "../../components/Pagination/Pagination";
+import Paginationold from "../../components/Pagination/Pagination";
 
 const ListOtherBooks = () => {
     const [page, setPage] = useState(0);
@@ -40,13 +40,13 @@ const ListOtherBooks = () => {
                 </p>
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
-                <Pagination
+                <Paginationold
                     actualPage={page}
                     setPage={setPage}
                     totalPages={totalPages}
                 />
                 <main className={styles["otherBook-main"]}>
-                    { sortedDatas.map(book => (
+                    { sortedDatas.map((book: Book) => (
                         <BookCard
                             key={book.id}
                             bookId={book.id}
@@ -56,11 +56,11 @@ const ListOtherBooks = () => {
                             publication={book.publicationDate}
                             description={book.description}
                             type={book.type100}
-                            isRead={book.is_read}
+                            isRead={book.isRead}
                         />
                     ))}
                 </main>
-                <Pagination
+                <Paginationold
                     actualPage={page}
                     setPage={setPage}
                     totalPages={totalPages}

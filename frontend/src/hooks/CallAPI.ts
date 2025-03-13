@@ -1,3 +1,4 @@
+// @ts-ignore
 import {CallAPIParams} from "../types/Types.ts";
 
 const CallAPI = ({
@@ -17,6 +18,7 @@ const CallAPI = ({
 
             if (setLoading) setLoading(true);
             if (body) body = JSON.stringify(body);
+
             const options = {
                 method: apiMethod,
                 headers: {
@@ -28,7 +30,8 @@ const CallAPI = ({
 
             try {
 
-                const response = await fetch(url, options);
+                // @ts-ignore
+              const response = await fetch(url, options);
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);

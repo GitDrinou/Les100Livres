@@ -1,0 +1,31 @@
+button,
+input[type=submit],
+.button-clear,
+.button-cancel{
+    border: none;
+    height: fit-content;
+    background-color: #138d75;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 10px;
+    text-decoration:none;
+    margin: 12px 4px;
+    cursor: pointer;
+}
+
+button:disabled{
+    background-color: #CCCCCC;
+    color: #717376;
+}
+
+
+@media screen and (max-width: 600px) {
+    input[type=submit] ,
+    .button-clear,
+    .button-cancel {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+}

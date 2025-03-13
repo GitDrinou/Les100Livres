@@ -5,7 +5,7 @@ import styles from "./AddBooks.module.css";
 import { useState } from "react";
 import CallAPI from "../../hooks/CallAPI";
 import {useNavigate} from "react-router-dom";
-import {Book} from "../../types/Types";
+import ActionButton from "../../components/ActionButton/ActionButton";
 
 const AddBook = () => {
     const url = "http://localhost:8080/books";
@@ -28,7 +28,7 @@ const AddBook = () => {
     const [error, setError] = useState(false)
 
 
-    const handleChange = (event) => {
+    const handleChange = (event: any) => {
         const {name, value} = event.target;
         setData({
             ...data,
@@ -48,7 +48,7 @@ const AddBook = () => {
         setData(initialData);
     }
 
-    const handleCancel = ()=> {
+    const handleCancel = () => {
         navigate(-1);
     }
 
@@ -139,10 +139,27 @@ const AddBook = () => {
                     </div>
                     <div className={styles.row}>
                         <div className={styles["col-label"]}></div>
-                        <div className={styles["col-inout"]}>
-                            <input type="button" className={styles["button-cancel"]} value="Annuler" onClick={handleCancel}/>
-                            <input type="submit" value="Enregistrer"/>
-                            <input type="button" value="Effacer" className={styles["button-clear"]} onClick={handleClear}/>
+                        <div className={styles["col-input"]}>
+                            <ActionButton
+                              isFromForm={true}
+                              label={"Annuler"}
+                              inputType={"button"}
+                              action={handleCancel}
+                              style={"cancel"}
+                            />
+                            <ActionButton
+                              isFromForm={true}
+                              label={"Enregistrer"}
+                              inputType={"submit"}
+                              style={"submit"}
+                              />
+                            <ActionButton
+                              isFromForm={true}
+                              label={"Effacer"}
+                              inputType={"button"}
+                              action={handleClear}
+                              style={"clear"}
+                            />
                         </div>
                     </div>
                 </form>

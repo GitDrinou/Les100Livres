@@ -16,15 +16,3 @@
     max-height: 50px;
 }
 
-
-.button-link {
-    border: none;
-    height: fit-content;
-    background-color: #138d75;
-    color: white;
-    border-radius: 10px;
-    font-size: 1.3rem;
-    padding: 10px;
-    text-decoration:none;
-    margin: 0;
-}

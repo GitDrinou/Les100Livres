@@ -61,30 +61,10 @@ textarea {
     resize: vertical;
 }
 
-input[type=submit],
-.button-clear,
-.button-cancel
-{
-    background-color: #138d75;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 20px 10px 0 0;
-    width: fit-content;
-    font-size: 1.2rem;
-}
 
 @media screen and (max-width: 600px) {
     .col-label {
         text-align: left;
-    }
-
-    input[type=submit] ,
-    .button-clear{
-        width: 100%;
-        margin-top: 20px;
     }
 
     .col-label,
