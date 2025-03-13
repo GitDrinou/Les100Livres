@@ -4,7 +4,7 @@ input[type=submit],
 .button-cancel{
     border: none;
     height: fit-content;
-    background-color: #138d75;
+    background-color: var(--color-primary);
     color: white;
     border-radius: 10px;
     font-size: 1rem;

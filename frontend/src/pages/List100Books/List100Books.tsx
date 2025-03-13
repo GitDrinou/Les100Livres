@@ -7,7 +7,7 @@ import CallAPI from "../../hooks/CallAPI";
 import styles from "./Liist100Books.module.css";
 import {sortedByTitleByIsRead} from "../../scripts/utilities";
 import {Book} from "../../types/Types";
-import Paginationold from "../../components/Pagination/Pagination";
+import Pagination from "../../components/Pagination/Pagination";
 import ReadDonutChart from "../../components/ReadDonutChart/ReadDonutChart";
 
 
@@ -27,13 +27,13 @@ const List100Books = () => {
     }, [page]);
 
     const sortedDatas = sortedByTitleByIsRead(data);
-
+console.table(data);
     const displayCounter = () => {
         let countRead = 0;
 
         if (!loading){
             for (const book of data) {
-                if (book.isRead ==="1") {
+                if (book.is_read ==="1") {
                     countRead++;
                 }
             }
@@ -64,13 +64,13 @@ const List100Books = () => {
                 </div>
                 </div>
 
-                <Paginationold
+                <Pagination
                     actualPage={page}
                     setPage={setPage}
                     totalPages={totalPages}
                 />
                 <main className={styles["App-main"]}>
-                    { sortedDatas.map((book : Book) => (
+                    { sortedDatas.map((book : any) => (
                         <BookCard
                             key={book.id}
                             bookId={book.id}
@@ -80,11 +80,11 @@ const List100Books = () => {
                             publication={book.publicationDate}
                             description={book.description}
                             type={book.type100}
-                            isRead={book.isRead}
+                            isRead={book.is_read}
                         />
                     ))}
                 </main>
-                <Paginationold
+                <Pagination
                     actualPage={page}
                     setPage={setPage}
                     totalPages={totalPages}

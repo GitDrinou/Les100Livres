@@ -6,7 +6,7 @@ import {ChangeEvent, useEffect, useState} from "react";
 import {Book} from "../../types/Types";
 import CallAPI from "../../hooks/CallAPI";
 import {sortedByAuthor, sortedByTitle, sortedByTitleByIsRead} from "../../scripts/utilities";
-import Paginationold from "../../components/Pagination/Pagination";
+import Pagination from "../../components/Pagination/Pagination";
 // @ts-ignore
 import UpdateIcon from "../../assets/icons/ico-update.png";
 
@@ -52,7 +52,7 @@ const UpdateABook = () => {
                 <h1>Modifier un livre </h1>
                 { loading && <div> Loading...</div> }
                 { error && <div> Une erreur est survenue...</div> }
-                { !filter && <Paginationold
+                { !filter && <Pagination
                     actualPage={page}
                     setPage={setPage}
                     totalPages={totalPages}
@@ -79,7 +79,7 @@ const UpdateABook = () => {
                     </tbody>
                   </table>
                 </div>
-              { !filter && <Paginationold
+              { !filter && <Pagination
                   actualPage={page}
                   setPage={setPage}
                   totalPages={totalPages}

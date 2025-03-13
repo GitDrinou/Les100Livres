@@ -1,5 +1,4 @@
 .container {
-    color:  #282C34;
     display: grid;
     grid-template-columns: 300px auto;
     //grid-gap: 20px;
@@ -10,7 +9,7 @@ h1 {
 }
 
 .filter {
-    border-right: 1px solid #282C34;
+    border-right: 1px solid var(--border-color-default);
     padding-right: 10px;
 
     select {
@@ -41,7 +40,7 @@ h1 {
 }
 
 .book {
-    border-bottom: 1px solid #282C34;
+    border-bottom: 1px solid var(--border-color-default);
     padding: 5px;
     margin: 0;
     

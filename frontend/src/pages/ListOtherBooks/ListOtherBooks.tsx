@@ -56,7 +56,7 @@ const ListOtherBooks = () => {
                             publication={book.publicationDate}
                             description={book.description}
                             type={book.type100}
-                            isRead={book.isRead}
+                            isRead={book.is_read}
                         />
                     ))}
                 </main>

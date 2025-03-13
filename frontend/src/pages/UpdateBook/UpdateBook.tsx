@@ -23,7 +23,7 @@ const UpdateBook = () => {
         isbn: "",
         description: "",
         type100: "1",
-        isRead: "0"
+        is_read: "0"
     }
 
     const [data, setData] = useState<Book>(initialData);
@@ -143,8 +143,8 @@ const UpdateBook = () => {
                             <select id="isRead"
                                     name="isRead"
                                     onChange={handleChange}>
-                                <option value="0" selected={data.isRead === "0"}>Non</option>
-                                <option value="1" selected={data.isRead === "1"}>Oui</option>
+                                <option value="0" selected={data.is_read === "0"}>Non</option>
+                                <option value="1" selected={data.is_read === "1"}>Oui</option>
                             </select>
                         </div>
                     </div>

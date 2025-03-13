@@ -6,6 +6,7 @@ import { useState } from "react";
 import CallAPI from "../../hooks/CallAPI";
 import {useNavigate} from "react-router-dom";
 import ActionButton from "../../components/ActionButton/ActionButton";
+import {Book} from "../../types/Types";
 
 const AddBook = () => {
     const url = "http://localhost:8080/books";
@@ -19,11 +20,11 @@ const AddBook = () => {
         isbn: "",
         description: "",
         type100: "0",
-        isRead: "0"
+        is_read: "1"
     }
 
     //const [formData, setFormData] = useState(initialData);
-    const [data, setData] = useState(initialData);
+    const [data, setData] = useState<Book>(initialData);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false)
 
@@ -130,7 +131,7 @@ const AddBook = () => {
                         <div className={styles["col-input"]}>
                             <select id="isRead"
                                     name="isRead"
-                                    value={data.isRead}
+                                    value={data.is_read}
                                     onChange={handleChange}>
                                 <option value="0">Non</option>
                                 <option value="1">Oui</option>

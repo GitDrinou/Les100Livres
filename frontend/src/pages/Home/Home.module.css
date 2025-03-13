@@ -1,5 +1,4 @@
 .main {
-    color:  #282C34;
     min-height: 100vh;
 }
 
@@ -8,7 +7,7 @@
 }
 
 .col-left {
-    border-right: 1px solid #282C34;
+    border-right: 1px solid var(--border-color-default);
     padding-right:20px;
     margin-right: 20px;
 }
@@ -30,7 +29,7 @@
         padding-right: 0;
         margin-right: 0;
         border-right: 0;
-        border-bottom: 1px solid #282C34;
+        border-bottom: 1px solid var(--border-color-default);
         padding-bottom:20px;
         margin-bottom: 20px;
     }

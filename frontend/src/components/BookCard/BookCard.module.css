@@ -1,5 +1,5 @@
 .card{
-    border: 1px solid #282C34;
+    border: 1px solid var(--border-color-default);
     border-radius: 10px;
 }
 
@@ -13,7 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #282C34;
     background-color: #d8d6d6;
     border-radius: 10px 10px 0 0 ;
 }
@@ -34,7 +33,7 @@
     font-style: italic;
     text-align: justify;
     padding: 0 10px 10px 10px;
-    border-bottom: 1px solid #282C34;
+    border-bottom: 1px solid var(--border-color-default);
 }
 
 .book-isbn{
