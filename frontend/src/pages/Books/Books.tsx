@@ -1,7 +1,7 @@
 import * as React from "react";
 import Menu from "../../components/Menu/Menu";
 // @ts-ignore
-import styles from "./UpdateABook.module.css";
+import styles from "./Books.module.css";
 import {ChangeEvent, useEffect, useState} from "react";
 import {Book} from "../../types/Types";
 import CallAPI from "../../hooks/CallAPI";
@@ -10,7 +10,7 @@ import Pagination from "../../components/Pagination/Pagination";
 // @ts-ignore
 import UpdateIcon from "../../assets/icons/ico-update.png";
 
-const UpdateABook = () => {
+const Books = () => {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
   const [data, setData] = useState<Book[]>([]);
@@ -89,4 +89,4 @@ const UpdateABook = () => {
     )
 }
 
-export default UpdateABook;
+export default Books;

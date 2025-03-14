@@ -49,9 +49,10 @@ const Admin = () => {
                           actionButton={() => document.location.href = "/add-book"}
                         />
                         <AdminCardButton
-                          description={"Cliquez ici, si vous voulez mettre à jour un livre."}
+                          description={"Cliquez ici, si vous voulez mettre à jour un livre parmi la bibliothèque de" +
+                            " tous les livres."}
                           label={"Modifier un livre"}
-                          actionButton={() => document.location.href = "/update-a-book"}
+                          actionButton={() => document.location.href = "/books"}
                         />
                         {data.length === 0 &&
                           <AdminCardButton
