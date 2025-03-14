@@ -13,4 +13,5 @@ import java.util.List;
 public interface BooksRepository extends JpaRepository<BooksDTO, Integer> {
     Page<BooksDTO> findALLBooksByType100(String type100, Pageable pageable);
     Page<BooksDTO> findAllOtherBooksByType100(String type100, Pageable pageable);
+    List<BooksDTO> findAllBooksByAuthor(String author);
 }

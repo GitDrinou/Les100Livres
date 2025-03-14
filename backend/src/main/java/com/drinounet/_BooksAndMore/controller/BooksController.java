@@ -21,7 +21,6 @@ import java.util.Optional;
 @RequestMapping("/books")
 @Tag(name = "Books", description = "Gestion des livres")
 public class BooksController {
-
     private final BooksService booksService;
     private final BooksRepository booksRepository;
 
@@ -31,10 +30,25 @@ public class BooksController {
     }
 
     @CrossOrigin
+    @GetMapping("/all")
+    public List<BooksDTO> getAllBooksWithoutPagination() {
+        return booksService.getAllBooksWithoutPagination();
+    }
+
+    @CrossOrigin
     @GetMapping
-    @Operation(summary = "Récupérer la liste de l'ensemble des livres (les 100 et les autres)", description = "Retourne tous les livres enregistrés")
-    public List<BooksDTO> getAllBooks() {
-        return booksService.getAllBooks();
+    @Operation(summary = "Récupérer la liste de l'ensemble des livres (les 100 et les autres) sous forme de " +
+            "pagination.", description = "Retourne tous les livres enregistrés")
+    public Page<BooksDTO> getAllBooks(Pageable pageable) {
+        Sort sort = Sort.by(
+                Sort.Order.asc("title")
+        );
+        Pageable sortedPageable = PageRequest.of(
+                pageable.getPageNumber(),
+                pageable.getPageSize(),
+                sort
+        );
+        return booksService.getAllBooks(sortedPageable);
     }
 
     @CrossOrigin
@@ -42,7 +56,7 @@ public class BooksController {
     @Operation(summary = "Récupérer la liste des 100 livres à lire dans une vie", description = "Retourne tous les 100 livres enregistrés")
      public Page<BooksDTO> getAll100Books(Pageable pageable) {
         Sort sort = Sort.by(
-                Sort.Order.desc("isRead"),
+                Sort.Order.desc("is_read"),
                 Sort.Order.asc("title")
         );
         Pageable sortedPageable = PageRequest.of(
@@ -63,8 +77,16 @@ public class BooksController {
     @CrossOrigin
     @GetMapping("/{bookId}")
     @Operation(summary = "Récupérer le détail d'un livre donné (par son identifiant)", description = "Retourne toutes les infos d'un livre enregistré")
-    public Optional<BooksDTO> getABook(@PathVariable Integer bookId) {
+    public Optional<BooksDTO> getABookById(@PathVariable Integer bookId) {
         return booksService.getBookById(bookId);
+    }
+
+    @CrossOrigin
+    @GetMapping("/filter/{author}")
+    @Operation(summary = "Récupérer le(s) livres filtré(s) par auteur)", description = "Retourne tous les livres " +
+            "filtrés par auteur" )
+    public List<BooksDTO> getABookByAuthor(@PathVariable String author) {
+        return booksService.getBookByAuthor(author);
     }
 
     @CrossOrigin
@@ -84,7 +106,6 @@ public class BooksController {
             return "success";
         }
         catch (Exception e){
-            e.printStackTrace();
             return "Error : " + e.getMessage();
         }
     }

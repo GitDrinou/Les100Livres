@@ -6,6 +6,7 @@ import com.drinounet._BooksAndMore.repository.BooksRepository;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,10 +29,15 @@ public class BooksServiceImpl  implements BooksService {
     }
 
     @Override
-    public List<BooksDTO> getAllBooks() {
+    public List<BooksDTO> getAllBooksWithoutPagination() {
         return booksRepository.findAll()
                 .stream()
                 .toList();
+    }
+
+    @Override
+    public Page<BooksDTO> getAllBooks(Pageable pageable) {
+        return booksRepository.findAll(pageable);
     }
 
     @Override
@@ -48,6 +54,11 @@ public class BooksServiceImpl  implements BooksService {
     public Optional<BooksDTO> getBookById(Integer bookId) {
         return Optional.ofNullable(booksRepository.findById(bookId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid book id " + bookId)));
+    }
+
+    @Override
+    public List<BooksDTO> getBookByAuthor(String author) {
+        return booksRepository.findAllBooksByAuthor(author).stream().toList();
     }
 
     @Override
@@ -90,11 +101,12 @@ public class BooksServiceImpl  implements BooksService {
     }
 
     private boolean isBookExist(Book book) {
-        List<BooksDTO> books =  getAllBooks();
-        for (BooksDTO existedBook : books) {
+        Page<BooksDTO> allBooks = this.getAllBooks(PageRequest.of(0, 5));
+//        List<BooksDTO> books =  getAllBooks();
+        for (BooksDTO existedBook : allBooks.getContent()) {
             BooksDTO bookDTO = convertToEntity(book);
             if (bookDTO.getIsbn().equals((existedBook.getIsbn()))) {
-                return true;
+               return true;
             }
         }
         return false;
@@ -110,7 +122,7 @@ public class BooksServiceImpl  implements BooksService {
         booksDTO.setIsbn(book.isbn());
         booksDTO.setDescription(book.description());
         booksDTO.setType100(book.type100());
-        booksDTO.setIs_read(book.isRead());
+        booksDTO.setIs_read(book.is_read());
         return booksDTO;
     }
 

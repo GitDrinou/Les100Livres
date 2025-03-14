@@ -11,10 +11,12 @@ import java.util.List;
 import java.util.Optional;
 
 public interface BooksService {
-   List<BooksDTO> getAllBooks();
+   List<BooksDTO> getAllBooksWithoutPagination();
+   Page<BooksDTO> getAllBooks(Pageable pageable);
    Page<BooksDTO> getAll100Books(Pageable pageable);
    Page<BooksDTO> getAllOtherBooks(Pageable pageable);
    Optional<BooksDTO> getBookById(Integer id);
+   List<BooksDTO> getBookByAuthor(String author);
    Book createBook(Book book);
    ResponseEntity<BooksDTO> updateBook(int id, Book book);
    void deleteBook(Integer bookId);

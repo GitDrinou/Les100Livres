@@ -29,10 +29,8 @@ public class BooksDTO {
     @Column(name = "type100", length = 1)
     private String type100;
 
-
-
     @Column(name = "is_read",length = 1)
-    private String isRead;
+    private String is_read;
 
     public Integer getId() {
         return id;
@@ -92,10 +90,10 @@ public class BooksDTO {
 
 
     public String getIs_read() {
-        return isRead;
+        return is_read;
     }
 
-    public void setIs_read(String isRead) {
-        this.isRead = isRead;
+    public void setIs_read(String is_read) {
+        this.is_read = is_read;
     }
 }

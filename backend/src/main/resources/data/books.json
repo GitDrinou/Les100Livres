@@ -6,7 +6,7 @@
     "isbn": "9-7820700-213047",
     "description": "Le roman, écrit à la première personne, suit le narrateur, Ferdinand Bardamu, idéaliste et rebelle, engagé volontaire dans la Grande guerre. Il y découvre avec épouvante les horreurs du front et finit, blessé, par échapper à la boucherie. Hospitalisé, choyé, médaillé, il découvre alors le monde de « l’arrière », son hypocrisie et ses plaisirs, y compris les amourettes sans lendemain. A chaque nouvelle étape de son odyssée, depuis le front de la guerre jusqu’à l’asile en passant par l’Afrique, l’Amérique et la banlieue de Paris, Bardamu n’en finit pas de croiser et de recroiser le chemin de Robinson, un personnage comme lui à la dérive, auquel le lie une amitié de plus en plus malsaine. Celle-ci attire, à intervalles réguliers, Bardamu dans une série d’aventures criminelles et sordides qui concluent le roman par la mort violente de ce double du héros",
     "type100": "1",
-    "isRead": "1"
+    "is_read": "1"
   },
   {
     "title": "A la recherche du temps perdu",
@@ -15,7 +15,7 @@
     "isbn": "0",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Don Quichotte",
@@ -24,7 +24,7 @@
     "isbn": "1",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Ulysse",
@@ -33,7 +33,7 @@
     "isbn": "2",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Cent ans de solitude",
@@ -42,7 +42,7 @@
     "isbn": "3",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Gatsby le Magnifique",
@@ -51,7 +51,7 @@
     "isbn": "4",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Moby Dick",
@@ -60,7 +60,7 @@
     "isbn": "5",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Guerre et Paix",
@@ -69,7 +69,7 @@
     "isbn": "6",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Hamlet",
@@ -78,7 +78,7 @@
     "isbn": "7",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "L'Odyssée",
@@ -87,7 +87,7 @@
     "isbn": "8",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Madame Bovary",
@@ -96,7 +96,7 @@
     "isbn": "9",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La Divine Comédie",
@@ -105,7 +105,7 @@
     "isbn": "10",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Lolita",
@@ -114,7 +114,7 @@
     "isbn": "11",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les frères Karamasov",
@@ -123,7 +123,7 @@
     "isbn": "12",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Crimes et châtiment",
@@ -132,7 +132,7 @@
     "isbn": "13",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les Hauts de Hurlevent",
@@ -141,7 +141,7 @@
     "isbn": "14",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "L'Attrape-Coeur",
@@ -150,7 +150,7 @@
     "isbn": "15",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Orgueil et Préjugés",
@@ -159,7 +159,7 @@
     "isbn": "16",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les Aventures de Huckleberry Finn",
@@ -168,7 +168,7 @@
     "isbn": "17",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Anna Karénine",
@@ -177,7 +177,7 @@
     "isbn": "18",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Alice aux pays des merveilles",
@@ -186,7 +186,7 @@
     "isbn": "19",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Illiade",
@@ -195,7 +195,7 @@
     "isbn": "20",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La promenade au phare",
@@ -204,7 +204,7 @@
     "isbn": "21",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Catch 22",
@@ -213,7 +213,7 @@
     "isbn": "22",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Au coeur des ténèbres",
@@ -222,7 +222,7 @@
     "isbn": "23",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le Bruit et la Fureur",
@@ -231,7 +231,7 @@
     "isbn": "24",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "1984",
@@ -240,7 +240,7 @@
     "isbn": "25",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les Grandes Espérances",
@@ -249,7 +249,7 @@
     "isbn": "26",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les Milles et Un Nuit",
@@ -258,7 +258,7 @@
     "isbn": "27",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les raisins de la colère",
@@ -267,7 +267,7 @@
     "isbn": "28",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Absalon, Absalon !",
@@ -276,7 +276,7 @@
     "isbn": "29",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "L'homme invisible",
@@ -285,7 +285,7 @@
     "isbn": "30",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Ne tirez pas sur l'oiseau moqueur",
@@ -294,7 +294,7 @@
     "isbn": "31",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le Procès",
@@ -303,7 +303,7 @@
     "isbn": "32",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le Rouge et le Noir",
@@ -312,7 +312,7 @@
     "isbn": "33",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Middlemarch",
@@ -321,7 +321,7 @@
     "isbn": "34",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les voyages de Gulliver",
@@ -330,7 +330,7 @@
     "isbn": "35",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Beloved",
@@ -339,7 +339,7 @@
     "isbn": "36",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Mrs Dalloway",
@@ -348,7 +348,7 @@
     "isbn": "37",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les nouvelles de...",
@@ -357,7 +357,7 @@
     "isbn": "38",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "L'Etranger",
@@ -366,7 +366,7 @@
     "isbn": "39",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Jane Eyre",
@@ -375,7 +375,7 @@
     "isbn": "40",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Enéide",
@@ -384,7 +384,7 @@
     "isbn": "41",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Fictions",
@@ -393,7 +393,7 @@
     "isbn": "42",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le soleil se lève aussi",
@@ -402,7 +402,7 @@
     "isbn": "43",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "David Copperfield",
@@ -411,7 +411,7 @@
     "isbn": "44",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Vie et opinions de Tristan Shandy, gentilhomme",
@@ -420,7 +420,7 @@
     "isbn": "45",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Feuilles d'herbes",
@@ -429,7 +429,7 @@
     "isbn": "46",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La Montagne magique",
@@ -438,7 +438,7 @@
     "isbn": "47",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Portrait de l'artiste en jeune homme",
@@ -447,7 +447,7 @@
     "isbn": "48",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les Enfants de minuit",
@@ -456,7 +456,7 @@
     "isbn": "49",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Oedipe Roi",
@@ -465,7 +465,7 @@
     "isbn": "50",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Candide",
@@ -474,7 +474,7 @@
     "isbn": "51",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le Seigneur des anneaux",
@@ -483,7 +483,7 @@
     "isbn": "52",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "L'idiot",
@@ -492,7 +492,7 @@
     "isbn": "53",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les Misérables",
@@ -501,7 +501,7 @@
     "isbn": "54",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Route des Indes",
@@ -510,7 +510,7 @@
     "isbn": "55",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le viel homme et la mer",
@@ -519,7 +519,7 @@
     "isbn": "56",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Tout s'effondre",
@@ -528,7 +528,7 @@
     "isbn": "57",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Emma",
@@ -537,7 +537,7 @@
     "isbn": "58",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Pour qui sonne le glas",
@@ -546,7 +546,7 @@
     "isbn": "59",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les nouvelles de ...",
@@ -555,7 +555,7 @@
     "isbn": "60",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La Métamorphose",
@@ -564,7 +564,7 @@
     "isbn": "61",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Portrait de femme",
@@ -573,7 +573,7 @@
     "isbn": "62",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Frankenstein ou le Prométhée moderne",
@@ -582,7 +582,7 @@
     "isbn": "63",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Feu pâle",
@@ -591,7 +591,7 @@
     "isbn": "64",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Antigone",
@@ -600,7 +600,7 @@
     "isbn": "65",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Tandis que j'agonise",
@@ -609,7 +609,7 @@
     "isbn": "66",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La couleur pourpre",
@@ -618,7 +618,7 @@
     "isbn": "67",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les Démons",
@@ -627,7 +627,7 @@
     "isbn": "68",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Autant en emporte le vent",
@@ -636,7 +636,7 @@
     "isbn": "69",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Sa majesté des mouches",
@@ -645,7 +645,7 @@
     "isbn": "70",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le meilleur des mondes",
@@ -654,7 +654,7 @@
     "isbn": "71",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les contes d'...",
@@ -663,7 +663,7 @@
     "isbn": "72",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le temps de l'innocence",
@@ -672,7 +672,7 @@
     "isbn": "73",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les âmes mortes",
@@ -681,7 +681,7 @@
     "isbn": "74",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Sur la route",
@@ -690,7 +690,7 @@
     "isbn": "75",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le bon soldat",
@@ -699,7 +699,7 @@
     "isbn": "76",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La ferme des animaux",
@@ -708,7 +708,7 @@
     "isbn": "77",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Orlando",
@@ -717,7 +717,7 @@
     "isbn": "78",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les contes de Canterbury",
@@ -726,7 +726,7 @@
     "isbn": "79",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La foire aux vanités",
@@ -735,7 +735,7 @@
     "isbn": "80",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Au-dessous du volcan",
@@ -744,7 +744,7 @@
     "isbn": "81",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La terre vaine",
@@ -753,7 +753,7 @@
     "isbn": "82",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "L'adieu aux armes",
@@ -762,7 +762,7 @@
     "isbn": "83",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le château",
@@ -771,7 +771,7 @@
     "isbn": "84",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "L'éducation sentimentale",
@@ -780,7 +780,7 @@
     "isbn": "85",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Abattoir 5",
@@ -789,7 +789,7 @@
     "isbn": "86",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La servabte écarlate",
@@ -798,7 +798,7 @@
     "isbn": "87",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La toile de Charlotte",
@@ -807,7 +807,7 @@
     "isbn": "88",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Une enfant du pays",
@@ -816,7 +816,7 @@
     "isbn": "89",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La chartreuse de Parme",
@@ -825,7 +825,7 @@
     "isbn": "90",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le paradis perdu",
@@ -834,7 +834,7 @@
     "isbn": "91",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Gargantua",
@@ -843,7 +843,7 @@
     "isbn": "92",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les poèmes d'...",
@@ -852,7 +852,7 @@
     "isbn": "93",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Faust",
@@ -861,7 +861,7 @@
     "isbn": "94",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Rebecca",
@@ -870,7 +870,7 @@
     "isbn": "95",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Les fleurs du mal",
@@ -879,7 +879,7 @@
     "isbn": "96",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Le Décaméron",
@@ -888,7 +888,7 @@
     "isbn": "97",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "La lettre écarlate",
@@ -897,7 +897,7 @@
     "isbn": "98",
     "description": " ",
     "type100": "1",
-    "isRead": "0"
+    "is_read": "0"
   },
   {
     "title": "Bonjour Tristesse",
