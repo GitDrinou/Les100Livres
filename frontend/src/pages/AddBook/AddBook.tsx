@@ -132,7 +132,7 @@ const AddBook = () => {
                             <select id="isRead"
                                     name="isRead"
                                     value={data.is_read}
-                                    onChange={handleChange}>
+                                    disabled={true}>
                                 <option value="0">Non</option>
                                 <option value="1">Oui</option>
                             </select>
