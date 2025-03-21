@@ -30,7 +30,7 @@ public class BooksDTO {
     private String type100;
 
     @Column(name = "is_read",length = 1)
-    private String is_read;
+    private String isRead;
 
     public Integer getId() {
         return id;
@@ -88,12 +88,13 @@ public class BooksDTO {
         this.type100 = type100;
     }
 
-
-    public String getIs_read() {
-        return is_read;
+    public String getIsRead() {
+        return isRead;
     }
 
-    public void setIs_read(String is_read) {
-        this.is_read = is_read;
+    public void setIsRead(String isRead) {
+        this.isRead = isRead;
     }
+
+
 }

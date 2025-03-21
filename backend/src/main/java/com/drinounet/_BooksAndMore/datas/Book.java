@@ -8,6 +8,6 @@ public record Book(
         String isbn,
         String description,
         String type100,
-        String is_read
+        String isRead
 ) {
 }

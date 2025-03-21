@@ -12,7 +12,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -24,7 +23,7 @@ public class BooksServiceImpl  implements BooksService {
     private final BooksRepository booksRepository;
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public BooksServiceImpl(BooksRepository booksRepository, ObjectMapper objectMapper) {
+    public BooksServiceImpl(BooksRepository booksRepository) {
         this.booksRepository = booksRepository;
     }
 
@@ -122,7 +121,7 @@ public class BooksServiceImpl  implements BooksService {
         booksDTO.setIsbn(book.isbn());
         booksDTO.setDescription(book.description());
         booksDTO.setType100(book.type100());
-        booksDTO.setIs_read(book.is_read());
+        booksDTO.setIsRead(book.isRead());
         return booksDTO;
     }
 
@@ -135,7 +134,7 @@ public class BooksServiceImpl  implements BooksService {
                 booksDTO.getIsbn(),
                 booksDTO.getDescription(),
                 booksDTO.getType100(),
-                booksDTO.getIs_read()
+                booksDTO.getIsRead()
                 );
     }
 

@@ -56,7 +56,7 @@ public class BooksController {
     @Operation(summary = "Récupérer la liste des 100 livres à lire dans une vie", description = "Retourne tous les 100 livres enregistrés")
      public Page<BooksDTO> getAll100Books(Pageable pageable) {
         Sort sort = Sort.by(
-                Sort.Order.desc("is_read"),
+                Sort.Order.desc("isRead"),
                 Sort.Order.asc("title")
         );
         Pageable sortedPageable = PageRequest.of(
