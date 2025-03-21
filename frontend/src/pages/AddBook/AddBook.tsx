@@ -20,7 +20,7 @@ const AddBook = () => {
         isbn: "",
         description: "",
         type100: "0",
-        is_read: "1"
+        isRead: "1"
     }
 
     //const [formData, setFormData] = useState(initialData);
@@ -131,7 +131,7 @@ const AddBook = () => {
                         <div className={styles["col-input"]}>
                             <select id="isRead"
                                     name="isRead"
-                                    value={data.is_read}
+                                    value={data.isRead}
                                     disabled={true}>
                                 <option value="0">Non</option>
                                 <option value="1">Oui</option>

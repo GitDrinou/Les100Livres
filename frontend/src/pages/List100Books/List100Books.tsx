@@ -27,13 +27,13 @@ const List100Books = () => {
     }, [page]);
 
     const sortedDatas = sortedByTitleByIsRead(data);
-console.table(data);
+
     const displayCounter = () => {
         let countRead = 0;
 
         if (!loading){
             for (const book of data) {
-                if (book.is_read ==="1") {
+                if (book.isRead ==="1") {
                     countRead++;
                 }
             }
@@ -80,7 +80,7 @@ console.table(data);
                             publication={book.publicationDate}
                             description={book.description}
                             type={book.type100}
-                            isRead={book.is_read}
+                            isRead={book.isRead}
                         />
                     ))}
                 </main>

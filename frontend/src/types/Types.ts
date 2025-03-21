@@ -8,7 +8,7 @@ export interface Book {
   isbn: string;
   description: string;
   type100: string;
-  is_read: string;
+  isRead: string;
 }
 
 export type CallAPIParams = {
