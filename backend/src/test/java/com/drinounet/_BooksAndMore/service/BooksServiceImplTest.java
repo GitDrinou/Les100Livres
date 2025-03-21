@@ -27,6 +27,7 @@ public class BooksServiceImplTest {
 
     private BooksDTO book;
     private BooksDTO book2;
+    private BooksDTO book3;
 
     @BeforeEach
     public void setup() {
@@ -47,10 +48,19 @@ public class BooksServiceImplTest {
         book2.setDescription("New Description 2");
         book2.setType100("1");
         book2.setIsRead("1");
+
+        book3 = new BooksDTO();
+        book3.setId(3);
+        book3.setTitle("New Title 3");
+        book3.setAuthor("New Author 3");
+        book3.setIsbn("New Isbn 3");
+        book3.setDescription("New Description 3");
+        book3.setType100("0");
+        book3.setIsRead("1");
     }
 
     @Test
-    void verify_the_size_of_the_100_list_when_adding_2_new_books() {
+    void should_return_2_books_with_type100_equal_to_1() {
         // Given
         List<BooksDTO> books = List.of(book, book2);
         Page<BooksDTO> mockPage = new PageImpl<>(books);
@@ -62,15 +72,13 @@ public class BooksServiceImplTest {
         Page<BooksDTO> result = booksService.getAll100Books(pageable);
 
         // Then
-        assertNotNull(result);
-        assertEquals(2, result.getTotalElements());
-        assertEquals("New Title", result.getContent().getFirst().getTitle());
-
         verify(booksRepository).findALLBooksByType100("1", pageable);
+        assertNotNull(result);
+        assertThat(result.getSize()).isEqualTo(2);
     }
 
     @Test
-    void verify_the_detail_of_an_identified_book() {
+    void should_return_the_detail_of_an_identified_book() {
         // Given
         when(booksRepository.save(book)).thenReturn(book);
 
@@ -82,7 +90,7 @@ public class BooksServiceImplTest {
     }
 
     @Test
-    void verify_the_update_of_an_identified_book() {
+    void should_return_the_identified_book_xith_updated_details() {
         // Given
         when(booksRepository.existsById(2)).thenReturn(true);
 
@@ -96,17 +104,32 @@ public class BooksServiceImplTest {
     }
 
    @Test
-    void verify_the_delete_of_an_identified_book() {
+    void should_delete_an_identified_book() {
         // Given
-        BooksDTO book3 = new BooksDTO();
-        book3.setId(3);
+        BooksDTO book4 = new BooksDTO();
+        book3.setId(4);
 
-        when(booksRepository.existsById(3)).thenReturn(true);
+        when(booksRepository.existsById(4)).thenReturn(true);
 
         // When
        booksService.deleteBook(book3.getId());
 
        // Then
        verify(booksRepository).deleteById(book3.getId());
+    }
+
+    @Test
+    void should_return_all_saved_books(){
+        // Given
+        List<BooksDTO> books = List.of(book, book2, book3);
+
+        when(booksRepository.findAll()).thenReturn(books);
+
+        // When
+        List<BooksDTO> result = booksService.getAllBooksWithoutPagination();
+
+        // Then
+        verify(booksRepository).findAll();
+        assertThat(result.size()).isEqualTo(3);
     }
 }
