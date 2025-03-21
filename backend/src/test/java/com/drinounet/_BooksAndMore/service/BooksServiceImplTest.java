@@ -37,7 +37,7 @@ public class BooksServiceImplTest {
         book.setIsbn("New Isbn");
         book.setDescription("New Description");
         book.setType100("1");
-        book.setIs_read("0");
+        book.setIsRead("0");
 
         book2 = new BooksDTO();
         book2.setId(2);
@@ -46,7 +46,7 @@ public class BooksServiceImplTest {
         book2.setIsbn("New Isbn 2");
         book2.setDescription("New Description 2");
         book2.setType100("1");
-        book2.setIs_read("1");
+        book2.setIsRead("1");
     }
 
     @Test

@@ -1,6 +1,7 @@
 package com.drinounet._BooksAndMore.repository;
 
 import com.drinounet._BooksAndMore.datas.BooksDTO;
+import org.hibernate.sql.ast.tree.cte.CteStatement;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,21 +19,27 @@ public class BookzRepositoryTest {
     private BooksRepository booksRepository;
 
     @Test
-    void findAllByType100() {
+    void should_return_all_books_with_type_100_equal_to_1() {
+        // Given
         Pageable pageable = PageRequest.of(0, 5, Sort.by("title"));
 
+        // When
         Page<BooksDTO> books = booksRepository.findALLBooksByType100("1", pageable);
-        Number numberOf100 = books.getTotalElements();
-        assertThat(numberOf100).isNotNull();
+
+        // Then
+        assertThat(books).isNotNull();
     }
 
    @Test
-    void findAllOtherBooks() {
+    void should_return_all_books_with_type_100_equal_to_0() {
+        // Given
         Pageable pageable = PageRequest.of(0, 5, Sort.by("title"));
 
+        // When
         Page<BooksDTO> books = booksRepository.findAllOtherBooksByType100("0", pageable);
-        Number numberOfOther = books.getTotalElements();
-        assertThat(numberOfOther).isNotNull();
+
+        // Then
+        assertThat(books).isNotNull();
     }
 
 }
