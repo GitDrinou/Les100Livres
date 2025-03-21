@@ -42,22 +42,8 @@
 }
 
 .admin-link{
-    padding: 10px;
-    border-radius: 5px ;
     text-align: right;
-    margin-top:5px;
-    font-weight: bold;
-    color: white;
-    background-color: var(--background-header);
-}
-
-.admin-link > a {
-    text-decoration: none;
-    color: white;
-}
-
-.admin-link > a:hover {
-    text-decoration: underline;
+    margin-top:0;
 }
 
 @media (max-width: 600px){

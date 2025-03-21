@@ -1,11 +1,20 @@
 import styles from './Menu.module.css';
 import ImgBooks from "../../assets/images/img-books.webp";
+import ActionButton from "../ActionButton/ActionButton.tsx";
+import * as React from "react";
 
 const Menu = () => {
 
   const pathname = document.location.pathname;
 
-  const displayAdmin = pathname != "/admin" ? <a href="/admin">Administration</a> : null;
+  const displayAdmin = pathname != "/admin" ?
+    <ActionButton
+      isFromForm={false}
+      label={"Administration"}
+      inputType={"button"}
+      action={() => document.location.href="/admin"}
+      style={"clear"}
+    /> : null;
 
   return (
     <>
