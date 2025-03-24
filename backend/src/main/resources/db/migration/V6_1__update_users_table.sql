@@ -1,0 +1,1 @@
+ALTER TABLE tUsers ADD role VARCHAR(25);
